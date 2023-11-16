@@ -1,0 +1,302 @@
+<HTML>
+<HEAD>
+   <TITLE>Courant &eacute;lectrique</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(14);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#courant", "cours_courant.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<hr class=barre>
+
+<!--*********************************************************************-->
+<!--****************** rep ==         ***********************************-->
+<!--*********************************************************************-->
+<H3>Cocher les assertions <B>justes</B> :</H3>
+
+<SCRIPT>
+//reponses QCM0
+var reponseQCM0 = new Array(false, false, true, false, true, false);
+var alternatives0 = new Array(
+        "L'intensit&eacute; d'un courant est toujours positive ou nulle.",
+        "L'intensit&eacute; d'un courant est plus importante &agrave; la borne \u0022plus\u0022 de la pile qu'&agrave; la borne \u0022moins\u0022.",
+        "La pile agit comme une \u0022pompe &agrave; &eacute;lectrons\u0022. Il sort autant d'&eacute;lectrons que ce qu'il en entre.",
+        "Chaque composant d'un circuit &eacute;lectrique absorbe des &eacute;lectrons. Il y a moins d'&eacute;lectrons &agrave; la sortie d'une r&eacute;sistance qu'&agrave; son entr&eacute;e.",
+        "Un interrupteur ouvert emp&ecirc;che le courant de passer (I = 0A)",
+        "Un interrupteur ouvert laisse passer le courant (I différent de 0A)");
+
+qcmv(0, alternatives0);
+
+</SCRIPT>
+<!--*********************************************************************-->
+<!--****************** rep ==         ***********************************-->
+<!--*********************************************************************-->
+
+<H3>Cocher les assertions <B>justes</B> :</H3>
+<SCRIPT>
+//reponses QCM1
+var reponseQCM1 = new Array(true, true, false, true, true);
+var alternatives1 = new Array(
+        "Il ne peut pas y avoir accumulation de charges &eacute;lectriques dans un dip&ocirc;le.",
+        "Le courant entrant dans une portion de circuit passif est identique au courant qui en sort.",
+        "Une pile a un courant plus important &agrave; sa \u0022sortie\u0022 qu'&agrave; son \u0022entr&eacute;e\u0022.",
+        "un interrupteur ferm&eacute; laisse passer le courant &eacute;lectrique (I différent de 0A).",
+        "Dans un circuit &eacute;lectrique comportant plusieurs dip&ocirc;les en s&eacute;rie, le premier et le dernier sont travers&eacute;s par le m&ecirc;me courant.");
+
+
+qcmv(1, alternatives1);
+
+</SCRIPT>
+<!--*********************************************************************-->
+<!--****************** rep ==         ***********************************-->
+<!--*********************************************************************-->
+
+<SCRIPT>
+var reponseoption2 = new Array(2, 1, 3, 2, 1, 2, 3, 3);
+</SCRIPT>
+<H3>Compl&eacute;ter les phrases suivantes en choisissant les mots justes :</H3>
+
+<FORM NAME="form2">L'intensit&eacute; I d'un courant &eacute;lectrique se mesure en 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">volts.&nbsp;</OPTION>
+<OPTION VALUE="c">amp&egrave;res.&nbsp;</OPTION>
+<OPTION VALUE="d">coulombs.&nbsp;</OPTION>
+</SELECT>
+<BR>
+
+
+L'intensit&eacute; I est 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">proportionnelle au&nbsp;</OPTION>
+<OPTION VALUE="c">&eacute;gale au&nbsp;</OPTION>
+<OPTION VALUE="d">ind&eacute;pendante du&nbsp;</OPTION>
+</SELECT>
+ nombre d'&eacute;lectrons par unit&eacute; de temps qui traversent une section du fil. 
+<BR>
+
+
+L'intensit&eacute; du courant sortant par une borne d'une pile est 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">plus &eacute;lev&eacute;e que&nbsp;</OPTION>
+<OPTION VALUE="c">moins &eacute;lev&eacute;e que&nbsp;</OPTION>
+<OPTION VALUE="d">&eacute;gale &agrave;&nbsp;</OPTION>
+</SELECT> 
+ l'intensit&eacute; du courant entrant par l'autre borne. 
+<BR>
+
+
+Dans un exercice, apr&egrave;s calcul, on trouve que l'intensit&eacute; 
+d'un courant &eacute;lectrique est n&eacute;gative. C'est une 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">absurdit&eacute;.&nbsp;</OPTION>
+<OPTION VALUE="c">possibilit&eacute;.&nbsp;</OPTION>
+<OPTION VALUE="d">erreur d'&eacute;nonc&eacute;.&nbsp;</OPTION>
+<OPTION VALUE="e">erreur de calcul.&nbsp;</OPTION>
+</SELECT>.
+<BR>
+
+
+L'intensit&eacute; d'un courant &eacute;lectrique est une grandeur 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">alg&eacute;brique.&nbsp;</OPTION>
+<OPTION VALUE="c">positive.&nbsp;</OPTION>
+<OPTION VALUE="d">n&eacute;gative.&nbsp;</OPTION>
+</SELECT> 
+<BR>
+
+
+Un nœud de courant est une connexion entre au moins 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">deux&nbsp;</OPTION>
+<OPTION VALUE="c">trois&nbsp;</OPTION>
+<OPTION VALUE="d">quatre&nbsp;</OPTION>
+</SELECT> 
+ conducteurs &eacute;lectriques.
+<BR>
+
+Dans un nœud de courant l'accumulation de charges &eacute;lectriques est 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">possible.&nbsp;</OPTION>
+<OPTION VALUE="c">temporaire.&nbsp;</OPTION>
+<OPTION VALUE="d">impossible.&nbsp;</OPTION>
+<OPTION VALUE="e">d&eacute;pend des dip&ocirc;les reli&eacute;s.&nbsp;</OPTION>
+</SELECT> 
+<BR>
+
+
+Dans une branche contenant un interrupteur ouvert, l'intensit&eacute; du courant 
+<SELECT size="1">
+<OPTION VALUE="a"></OPTION>
+<OPTION VALUE="b">est toujours positive.&nbsp;</OPTION>
+<OPTION VALUE="c">est toujours n&eacute;gative.&nbsp;</OPTION>
+<OPTION VALUE="d">est toujours nulle.&nbsp;</OPTION>
+<OPTION VALUE="e">d&eacute;pend du sens de branchement de la pile.&nbsp;</OPTION>
+</SELECT> 
+<BR>
+
+</FORM>
+
+<DIV align=right>
+<FORM NAME="Corrige2">
+<INPUT type="button" name="Note" value="Résultat" 
+onclick="boolpage[2]=champtestoption(form2, reponseoption2, Corrige2[0])">
+</FORM>
+</DIV>
+
+<hr class=barre>
+<!--*********************************************************************-->
+<!--****************** rep ==         ***********************************-->
+<!--*********************************************************************-->
+
+<H3>Donner la loi des nœuds concernant I<SUB>1</SUB>, I<SUB>2</SUB> et I<SUB>3</SUB>.</H3>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=2 CELLPADDING=4 WIDTH=207>
+<TR><TD VALIGN="TOP" HEIGHT=170>
+<P ALIGN="CENTER"><IMG SRC="Image25.gif" WIDTH=180 HEIGHT=153></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle3 = 'I3=I1+I2'; 
+F_Equivalence(3);
+</SCRIPT>
+
+<hr class=barre>
+<!--*********************************************************************-->
+<!--****************** rep ==         ***********************************-->
+<!--*********************************************************************-->
+<H3>Donner la loi des nœuds concernant I<SUB>1</SUB>, I<SUB>2</SUB> et I<SUB>3</SUB>.</H3>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=2 CELLPADDING=4 WIDTH=207>
+<TR><TD VALIGN="TOP" HEIGHT=170>
+<P ALIGN="CENTER"><IMG SRC="Image26.gif" WIDTH=189 HEIGHT=153></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle4 = 'I1=I3+I2'; 
+F_Equivalence(4);
+</SCRIPT>
+<hr size=4 align=center width="80%">
+<!--*********************************************************************-->
+<!--****************** rep ==         ***********************************-->
+<!--*********************************************************************-->
+
+<H3>Donner la loi des n&#156;uds entre I<SUB>1</SUB>, I<SUB>2</SUB>, I<SUB>3</SUB> et I<SUB>4</SUB>.</H3>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=2 CELLPADDING=4 WIDTH=207>
+<TR><TD VALIGN="TOP" HEIGHT=170>
+<P ALIGN="CENTER"><IMG SRC="Image29.gif" WIDTH=133 HEIGHT=163></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle5 = 'I1=-I2-I3-I4';
+F_Equivalence(5);
+</SCRIPT>
+<BR>
+<H3>Exprimer I<SUB>2</SUB> en fonction des autres intensit&eacute;s de courants :</H3>
+<SCRIPT>
+var reponseFormelle6 = 'I2=-I1-I3-I4';
+F_Canonique(6);
+</SCRIPT>
+<BR>
+<H3>Exprimer I<SUB>4</SUB> en fonction des autres intensit&eacute;s de courants :</H3>
+<SCRIPT>
+var reponseFormelle7 = 'I4=-I1-I2-I3';
+F_Equivalence(7);
+</SCRIPT>
+<hr class=barre>
+<!--*********************************************************************-->
+<!--****************** rep ==         ***********************************-->
+<!--*********************************************************************-->
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=2 CELLPADDING=4 WIDTH=318>
+<TR><TD VALIGN="TOP" HEIGHT=170>
+<P ALIGN="CENTER"><IMG SRC="Image32.gif" WIDTH=265 HEIGHT=144></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<H3>Donner la loi des n&#156;uds en A.</H3>
+
+<SCRIPT>
+var reponseFormelle8 = 'I2=I3+I1';
+F_Equivalence(8);
+</SCRIPT>
+
+<BR>
+<H3>Donner la loi des n&#156;uds en B.</H3>
+<SCRIPT>
+var reponseFormelle9 = 'I5=I3+I4';
+F_Equivalence(9);
+</SCRIPT>
+
+<BR>
+<H3>Donner la loi des n&#156;uds en C.</H3>
+<SCRIPT>
+var reponseFormelle10 = 'I5=-I6-I7';
+F_Equivalence(10);
+</SCRIPT>
+
+<BR>
+<H3>En d&eacute;duire une relation entre I<SUB>1</SUB>, I<SUB>2</SUB>, I<SUB>4</SUB> et I<SUB>5</SUB>.</H3>
+<SCRIPT>
+var reponseFormelle11 = 'I1=I2+I4-I5';
+F_Equivalence(11);
+</SCRIPT>
+
+<BR>
+<H3>En d&eacute;duire une relation entre I<SUB>3</SUB>, I<SUB>4</SUB>, I<SUB>6</SUB> et I<SUB>7</SUB>.</H3>
+<P><font face="Times New Roman" size="2" color=#FF0000><i>(Penser à la loi des nœuds généralisée)</i></font></P>
+<SCRIPT>
+var reponseFormelle12 = 'I3=-I4-I6-I7';
+F_Equivalence(12);
+</SCRIPT>
+
+<BR>
+<H3>En d&eacute;duire une relation entre I<SUB>1</SUB>, I<SUB>2</SUB>, I<SUB>4</SUB>, I<SUB>6</SUB> et I<SUB>7</SUB>.</H3>
+<P><font face="Times New Roman" size="2" color=#FF0000><i>(Penser à la loi des nœuds généralisée)</i></font></P>
+<SCRIPT>
+var reponseFormelle13 = 'I1=I2+I4+I6+I7';
+F_Equivalence(13);
+</SCRIPT>
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+</BODY>
+</HTML>

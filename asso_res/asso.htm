@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+   <TITLE>Association de résistors</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+
+
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(7);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#asso_res", "", "asso1.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR size="4">
+<!--*********************************************************************-->
+<!--*******************  true, false, false, false, false, true  ********-->
+<!--*********************************************************************-->
+<H3>
+<P>Cocher les assertions qui sont justes :</P>
+</H3>
+<SCRIPT>
+//reponses QCM0
+var reponseQCM0 = new Array(true, false, false, false, false, true);
+var alternatives0 = new Array(
+        "En s&eacute;rie les r&eacute;sistors sont travers&eacute;s par le m&ecirc;me courant.",
+        "En parall&egrave;le les r&eacute;sistors sont travers&eacute;s par le m&ecirc;me courant.",
+        "En s&eacute;rie on ajoute les conductances pour trouver la conductance &eacute;quivalente.",
+        "Le r&eacute;sistor &eacute;quivalent &agrave; une association de r&eacute;sistors est travers&eacute;e par le m&ecirc;me courant mais n'a pas la m&ecirc;me tension &agrave; ses bornes.",
+        "En s&eacute;rie les r&eacute;sistors ont m&ecirc;me tension &agrave; leurs bornes.",
+        "Une association de n r&eacute;sistors identiques de valeur R en s&eacute;rie pr&eacute;sente une r&eacute;sistance &eacute;quivalente n * R."
+        );
+
+qcmv(0, alternatives0);
+
+</SCRIPT>
+
+
+<!--*********************************************************************-->
+<!--*******************  true, true, false, true, true, false  **********-->
+<!--*********************************************************************-->
+<H3>
+<P>Cocher les assertions qui sont justes :</P>
+</H3>
+<SCRIPT>
+//reponses QCM1
+var reponseQCM1 = new Array(true, true, false, true, true, false);
+var alternatives1 = new Array(
+        "En parall&egrave;le les r&eacute;sistors ont m&ecirc;me tension &agrave; leurs bornes",
+        "En parall&egrave;le on ajoute les conductances pour trouver la conductance &eacute;quivalente",
+        "La loi d'Ohm pour une conductance G s'&eacute;crit U = G * I",
+        "Une association de n r&eacute;sistors identiques de valeur R en parall&egrave;le pr&eacute;sente une r&eacute;sistance &eacute;quivalente R / n.",
+        "Pour deux r&eacute;sistances R<SUB>1</SUB> et R<SUB>2</SUB> en parall&egrave;le la r&eacute;sistance &eacute;quivalente s'exprime <BR>        <CENTER>R<SUB>&eacute;q</SUB> = (R<SUB>1 </SUB>* R<SUB>2</SUB>) / (R<SUB>1 </SUB>+ R<SUB>2</SUB>)</CENTER>",
+        "Pour trois r&eacute;sistances R<SUB>1</SUB>, R<SUB>2</SUB> et R<SUB>3</SUB> en parall&egrave;le la r&eacute;sistance &eacute;quivalente s'exprime <BR> <CENTER>R<SUB>&eacute;q</SUB> = (R<SUB>1 </SUB>* R<SUB>2</SUB> * R<SUB>3</SUB>) / (R<SUB>1 </SUB>+ R<SUB>2</SUB> + R<SUB>3</SUB>)</CENTER>."
+        );
+
+qcmv(1, alternatives1);
+
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*******************  résistances équivalentes  **********************-->
+<!--*********************************************************************-->
+<H3>
+<P>Donner l'expression de la r&eacute;sistance &eacute;quivalente R<SUB>&eacute;q</SUB> pour chaque association suivante :</P>
+</H3>
+<CENTER>
+<P>Remarque : chaque r&eacute;ponse devra &ecirc;tre formul&eacute;e R&eacute;q = ….</P>
+</CENTER>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image63.gif" WIDTH=182 HEIGHT=100></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<SCRIPT>
+var reponseFormelle2 = 'Réq=R1+R2';
+F_Canonique(2);
+</SCRIPT>
+
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image64.gif" WIDTH=129 HEIGHT=128></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle3 = 'Réq=(R1*R2)/(R1+R2)';
+F_Canonique(3);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image69.gif" WIDTH=197 HEIGHT=127></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+<SCRIPT>
+var reponseFormelle4 = 'Réq=(R1*R2)/(R1+R2)+R3';
+F_Canonique(4);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image70.gif" WIDTH=218 HEIGHT=127></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+<SCRIPT>
+var reponseFormelle5 = 'Réq=(R2*(R1+R3))/(R1+R2+R3)';
+F_Canonique(5);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image71.gif" WIDTH=150 HEIGHT=148></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle6 = 'Réq=(R1*(R2+R3))/(R1+R2+R3)';
+F_Canonique(6);
+</SCRIPT>
+
+<HR size="4">
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

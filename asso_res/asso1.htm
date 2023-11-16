@@ -1,0 +1,189 @@
+<HTML>
+<HEAD>
+   <TITLE>Association de résistors</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(9);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#asso_res", "asso.htm", "asso2.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR size="4">
+
+<!--*********************************************************************-->
+<!--*******************  résistances équivalentes  **********************-->
+<!--*********************************************************************-->
+<H3>
+<P>Donner l'expression de la r&eacute;sistance &eacute;quivalente R<SUB>&eacute;q</SUB> pour chaque association suivante :</P>
+</H3>
+<CENTER>
+<P>Remarque : chaque r&eacute;ponse devra &ecirc;tre formul&eacute;e R&eacute;q = ….</P>
+</CENTER>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image74.gif" WIDTH=211 HEIGHT=146></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<SCRIPT>
+var reponseFormelle0 = 'Réq=(R1*R2)/(R1+R2)';
+F_Canonique(0);
+</SCRIPT>
+
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image75.gif" WIDTH=213 HEIGHT=146></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle1 = 'Réq=0';
+F_Canonique(1);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image76.gif" WIDTH=219 HEIGHT=146></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+<SCRIPT>
+var reponseFormelle2 = 'Réq=(R1*(R2+R3))/(R1+R2+R3)';
+F_Canonique(2);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image77.gif" WIDTH=215 HEIGHT=146></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+<SCRIPT>
+var reponseFormelle3 = 'Réq=(R1*R2)/(R1+R2)+(R3*R4)/(R3+R4)';
+F_Canonique(3);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image78.gif" WIDTH=215 HEIGHT=127></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle4 = 'Réq=(R2*(R1+R4))/(R1+R2+R4)';
+F_Canonique(4);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image82.gif" WIDTH=126 HEIGHT=174></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle5 = 'Réq=(R1*R2*R3)/(R1*R3+R2*R3+R1*R2)';
+F_Equivalence(5);
+</SCRIPT>
+<CENTER>
+<P>Remarque : Si vous ne parvenez pas à donner l'expression de R<SUB>&eacute;q</SUB>, donner l'expression de 1/R<SUB>&eacute;q</SUB></P>
+</CENTER>
+
+<HR size="4">
+
+<!--*********************************************************************-->
+<!--*******************  conductances équivalentes  *********************-->
+<!--*********************************************************************-->
+<H3>
+<P>Donner l'expression de la conductance &eacute;quivalente G<SUB>&eacute;q</SUB> pour chaque association suivante :</P>
+</H3>
+<CENTER>
+<P>Remarque : chaque r&eacute;ponse devra &ecirc;tre formul&eacute;e G&eacute;q = ….</P>
+</CENTER>
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image79.gif" WIDTH=131 HEIGHT=147></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle6 = 'Géq=G1+G2';
+F_Canonique(6);
+</SCRIPT>
+
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image80.gif" WIDTH=173 HEIGHT=97></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle7 = 'Géq=(G2*G1)/(G1+G2)';
+F_Canonique(7);
+</SCRIPT>
+
+
+<P>&nbsp;</P>
+<P ALIGN="CENTER"></P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=153>
+<P ALIGN="CENTER"><IMG SRC="Image81.gif" WIDTH=193 HEIGHT=145></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<SCRIPT>
+var reponseFormelle8 = 'Géq=(G2+G1)*G3/(G1+G2+G3)';
+F_Canonique(8);
+</SCRIPT>
+
+<HR size="4">
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<TITLE>INTENSITE D'UN COURANT ET LOI DES NŒUDS</TITLE>
+<LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--configuration des liens-->
+lien("#courant", "", "courant1.htm");
+vu_metre();
+</SCRIPT>
+
+<!--***************** texte ********************-->
+<H1>Intensit&eacute; d'un courant et loi des nœuds</H1>
+<H2>G&eacute;n&eacute;ralit&eacute;s</H2>
+
+<div style="border: groove #add8e6 4px">
+<div style="margin-left: 25px">
+<P>Le courant circule si une force &eacute;lectromotrice existe entre  deux points d'un circuit &eacute;lectrique et si la circulation est possible (pas de circuit ouvert le long du chemin).</P>
+<P>On note l'intensit&eacute; du courant par une fl&egrave;che sur le conducteur consid&eacute;r&eacute; &agrave; laquelle on associe un nom. </P>
+</div>
+</div>
+<CENTER><TABLE BORDER COLS=1 WIDTH="600" HEIGHT="300" >
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER>
+<BR>
+<IMG SRC="circuit2.gif" height=286 width=504>
+<BR><FONT color="#666666">Exemple de circuit &eacute;lectrique</FONT>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>L'intensit&eacute; du courant est une grandeur alg&eacute;brique (positive ou n&eacute;gative). Le signe indique le sens r&eacute;el &quot;d'&eacute;coulement&quot; du courant par rapport au sens de la fl&egrave;che.</P>
+<P></P>
+<CENTER><TABLE BORDER COLS=2 WIDTH="100" HEIGHT="75" >
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER WIDTH="200" HEIGHT="145">
+
+<IMG SRC="Image257.gif" WIDTH=171 HEIGHT=115>
+</TD>
+<TD ALIGN=CENTER VALIGN=CENTER WIDTH="200" HEIGHT="145">
+
+<IMG SRC="Image258.gif" WIDTH=171 HEIGHT=115>
+</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+
+<p><em> Remarque :</em> Un interrupteur permet d&rsquo;ouvrir un circuit et d&rsquo;emp&ecirc;cher le passage du courant.</p>
+<CENTER><TABLE BORDER COLS=2 WIDTH="350" HEIGHT="45" >
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER WIDTH="200" HEIGHT="100">
+
+  <p>    <img width="84" height="35" src="cours_courant_clip_image002_0002.gif">  </p>
+  <p>i = 0A</p>
+  </TD>
+<TD ALIGN=CENTER VALIGN=CENTER WIDTH="200" HEIGHT="100">
+
+  <p><img width="87" height="35" src="cours_courant_clip_image004_0000.gif"> </p>
+  <p>i quelconque</p>
+ </TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<H2>Loi des nœuds</H2>
+<P>Dans les conditions usuelles de fonctionnement, il ne peut y avoir accumulation ou disparition de charges dans un dip&ocirc;le. La quantit&eacute; de charges qui entre dans le dip&ocirc;le est donc la m&ecirc;me que celle qui en sort. </P>
+<CENTER><TABLE BORDER=1  COLS=1 WIDTH="60" HEIGHT="10" >
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER>
+
+<IMG SRC="Image259.gif" WIDTH=227 HEIGHT=106>
+
+</TD>
+</TR>
+</TABLE></CENTER>
+
+<H3>Propri&eacute;t&eacute; : </H3>
+
+<div style="border: groove #add8e6 4px">
+<div style="margin-left: 25px">
+<P><b>L'intensit&eacute; du courant entrant dans un dip&ocirc;le est la m&ecirc;me que l'intensit&eacute; du courant sortant de ce dip&ocirc;le. </b></P>
+</DIV>
+</DIV>
+
+<P>Un nœud &eacute;lectrique est la simple connexion entre plusieurs conducteurs &eacute;lectriques.</P>
+<CENTER><TABLE BORDER=1  COLS=1 WIDTH="60" HEIGHT="10" >
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER>
+
+<IMG SRC="Image261.gif" WIDTH=199 HEIGHT=163>
+
+</TD>
+</TR>
+</TABLE></CENTER>
+
+<P>La propri&eacute;t&eacute; &eacute;nonc&eacute;e pr&eacute;c&eacute;demment est donc aussi vraie pour un nœud.</P>
+<H3>Loi des nœuds : </H3>
+<div style="border: groove #add8e6 4px">
+<div style="margin-left: 25px">
+<P><b>La somme des intensit&eacute;s des courants entrants dans un nœud est &eacute;gale &agrave; la somme des intensit&eacute;s des courants sortants du nœud.</b></P>
+</DIV>
+</DIV>
+
+
+<P>Pour le nœud N : I<SUB>1</SUB> = I<SUB>2</SUB> + I<SUB>3</SUB></P>
+<P>L'animation suivante simule le d&eacute;placement des &eacute;lectrons pour un tel nœud.<P>
+<CENTER><TABLE BORDER=1  COLS=1 WIDTH="60" HEIGHT="10" >
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER>
+
+<IMG SRC="noeud.gif" WIDTH=320 HEIGHT=200>
+
+</TD>
+</TR>
+</TABLE></CENTER>
+<P><font class=rem>Remarque :</font> On peut g&eacute;n&eacute;raliser cette loi &agrave; toute portion de circuit &eacute;lectrique.</P>
+<CENTER><TABLE BORDER=1  COLS=1 WIDTH="60" HEIGHT="10" >
+<TR>
+<TD ALIGN=CENTER VALIGN=CENTER>
+
+<IMG SRC="Image262.gif" WIDTH=199 HEIGHT=163>
+
+</TD>
+</TR>
+</TABLE></CENTER>
+<P>On peut &eacute;crire pour ce circuit : I<SUB>1</SUB> = I<SUB>2</SUB> + I<SUB>3</SUB></P>
+
+<BR>
+<BR>
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

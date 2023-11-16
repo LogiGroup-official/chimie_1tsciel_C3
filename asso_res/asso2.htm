@@ -1,0 +1,253 @@
+<HTML>
+<HEAD>
+   <TITLE>Divideur de tension</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(13);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#asso_res", "asso1.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR size="4">
+<!--*********************************************************************-->
+<!--*******************  true, false, true, false, true  ****************-->
+<!--*********************************************************************-->
+<H3>
+<P>Cocher les assertions qui sont justes :</P>
+</H3>
+<SCRIPT>
+//reponses QCM0
+var reponseQCM0 = new Array(true, false, true, false, true);
+var alternatives0 = new Array(
+        "Un diviseur de tension est constitu&eacute; par plusieurs r&eacute;sistors en s&eacute;rie",
+        "Un diviseur de courant est constitu&eacute; par plusieurs r&eacute;sistors en s&eacute;rie",
+        "Un diviseur (de tension ou de courant) par deux est constitu&eacute; par deux r&eacute;sistors de m&ecirc;me r&eacute;sistance",
+        "Pour un diviseur de tension par dix, constitu&eacute; de deux r&eacute;sistors R<SUB>1</SUB> et R<SUB>2</SUB>, si R<SUB>2</SUB> est la r&eacute;sistance la plus &eacute;lev&eacute;e alors on a R<SUB>2</SUB> = 10 * R<SUB>1</SUB>",
+        "Pour un diviseur de tension par dix, constitu&eacute; de deux r&eacute;sistors R<SUB>1</SUB> et R<SUB>2</SUB>, si R<SUB>2</SUB> est la r&eacute;sistance la plus &eacute;lev&eacute;e alors on a R<SUB>2</SUB> = 9 * R<SUB>1</SUB>"
+        );
+
+qcmv(0, alternatives0);
+
+</SCRIPT>
+
+
+<!--*********************************************************************-->
+<!--*******************  true, false, true, false, true  ****************-->
+<!--*********************************************************************-->
+<H3>
+<P>Cocher les assertions qui sont justes par rapport au sch&eacute;ma suivant et pour chacune des hypoth&egrave;ses :</P>
+</H3>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=242>
+<P ALIGN="CENTER"><IMG SRC="Image85.gif" WIDTH=165 HEIGHT=197></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<B>
+<P>Premi&egrave;re hypoth&egrave;se : I' est diff&eacute;rent de 0.</P>
+</B>
+
+<SCRIPT>
+//reponses QCM1
+var reponseQCM1 = new Array(true, true, false, false, true, false);
+var alternatives1 = new Array(
+        "On ne peut pas utiliser la relation du diviseur de tension",
+        "Les r&eacute;sistors ne sont pas en s&eacute;rie",
+        "On peut &eacute;crire U<SUB>1</SUB> / U = R<SUB>1</SUB> / (R<SUB>1</SUB> + R<SUB>2</SUB>)",
+        "On peut &eacute;crire U<SUB>2</SUB> = U * R<SUB>1</SUB> / (R<SUB>1</SUB> + R<SUB>2</SUB>)",
+        "On peut &eacute;crire U = U<SUB>1</SUB> + U<SUB>2</SUB>",
+        "On peut &eacute;crire U<SUB>2</SUB> = R<SUB>2</SUB> * I'"
+        );
+
+qcmv(1, alternatives1);
+
+</SCRIPT>
+<!--*********************************************************************-->
+<!--*******************  false, false, true, false, true, false  ********-->
+<!--*********************************************************************-->
+
+<B>
+<P>deuxi&egrave;me hypoth&egrave;se : I' est &eacute;gal &agrave; 0.</P>
+</B>
+
+<SCRIPT>
+//reponses QCM2
+var reponseQCM2 = new Array(false, false, true, false, true, false);
+var alternatives2 = new Array(
+        "On ne peut pas utiliser la relation du diviseur de tension",
+        "Les r&eacute;sistors ne sont pas en s&eacute;rie",
+        "On peut &eacute;crire U<SUB>1</SUB> / U = R<SUB>1</SUB> / (R<SUB>1</SUB> + R<SUB>2</SUB>)",
+        "On peut &eacute;crire U<SUB>2</SUB> = U * R<SUB>1</SUB> / (R<SUB>1</SUB> + R<SUB>2</SUB>)",
+        "On peut &eacute;crire U = U<SUB>1</SUB> + U<SUB>2</SUB>",
+        "On peut &eacute;crire U<SUB>2</SUB> = R<SUB>2</SUB> * I'"
+        );
+
+qcmv(2, alternatives2);
+
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*******************  applications numériques  ***********************-->
+<!--*********************************************************************-->
+<H3>
+<P>Donner la valeur de U<SUB>1</SUB> et de U<SUB>2</SUB> dans chacun des cas suivants :</P>
+</H3>
+<P>Remarque : Les r&eacute;sultats seront arrondis &agrave; trois chiffres significatifs.</P>
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=250>
+<TR><TD VALIGN="MIDDLE" HEIGHT=242>
+<P ALIGN="CENTER"><IMG SRC="Image86.gif" WIDTH=165 HEIGHT=197></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<!--*********************************************************************-->
+<!--*******************  U1=6V, U2=6V  **********************************-->
+<!--*********************************************************************-->
+<H4>
+<P>U = 12V, R<SUB>1</SUB> = 1 k<FONT FACE="Symbol">&#87;</FONT>
+, R<SUB>2</SUB> = 1 k<FONT FACE="Symbol">&#87;</FONT>
+,</P>
+</H4>
+<P>U<SUB>1</SUB> :</P>
+<SCRIPT>
+var reponsenum3 = new String('6V'); 
+N(3, 'U<SUB>1</SUB> = ');
+</SCRIPT>
+
+<P>U<SUB>2</SUB> :</P>
+<SCRIPT>
+var reponsenum4 = new String('6V'); 
+N(4, 'U<SUB>2</SUB> = ');
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*******************  U1=1V, U2=9V  **********************************-->
+<!--*********************************************************************-->
+<BR>
+<BR>
+<H4>
+<P>U = 10V, R<SUB>1</SUB> = 1 k<FONT FACE="Symbol">&#87;</FONT>
+, R<SUB>2</SUB> = 9 k<FONT FACE="Symbol">&#87;</FONT>
+,</P>
+</H4>
+
+<P>U<SUB>1</SUB> :</P>
+<SCRIPT>
+var reponsenum5 = new String('1V'); 
+N(5, 'U<SUB>1</SUB> = ');
+</SCRIPT>
+
+<P>U<SUB>2</SUB> :</P>
+<SCRIPT>
+var reponsenum6 = new String('9V'); 
+N(6, 'U<SUB>2</SUB> = ');
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*******************  U1=2,14V, U2=2,86V  **********************************-->
+<!--*********************************************************************-->
+<BR>
+<BR>
+<H4>
+<P>U = 5V, R<SUB>1</SUB> = 3 k<FONT FACE="Symbol">&#87;</FONT>
+, R<SUB>2</SUB> = 4 k<FONT FACE="Symbol">&#87;</FONT>
+,</P>
+</H4>
+
+<P>U<SUB>1</SUB> :</P>
+<SCRIPT>
+var reponsenum7 = new String('2,14V'); 
+N(7, 'U<SUB>1</SUB> = ');
+</SCRIPT>
+
+<P>U<SUB>2</SUB> :</P>
+<SCRIPT>
+var reponsenum8 = new String('2,86V'); 
+N(8, 'U<SUB>2</SUB> = ');
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*******************  U1=6,13V, U2=0,87V  **********************************-->
+<!--*********************************************************************-->
+<BR>
+<BR>
+<H4>
+<P>U = 7V, R<SUB>1</SUB> = 33 k<FONT FACE="Symbol">&#87;</FONT>
+, R<SUB>2</SUB> = 4,7 k<FONT FACE="Symbol">&#87;</FONT>
+,</P>
+</H4>
+
+<P>U<SUB>1</SUB> :</P>
+<SCRIPT>
+var reponsenum9 = new String('6,13V'); 
+N(9, 'U<SUB>1</SUB> = ');
+</SCRIPT>
+
+<P>U<SUB>2</SUB> :</P>
+<SCRIPT>
+var reponsenum10 = new String('0,87V'); 
+N(10, 'U<SUB>2</SUB> = ');
+</SCRIPT>
+
+
+<!--*********************************************************************-->
+<!--*******************  U1=6,13V, U2=0,87V  **********************************-->
+<!--*********************************************************************-->
+<BR>
+<BR>
+<H4>
+<P>U = -12V, R<SUB>1</SUB> = 2,2 k<FONT FACE="Symbol">&#87;</FONT>
+, R<SUB>2</SUB> = 4,7 k<FONT FACE="Symbol">&#87;</FONT>
+,</P>
+</H4>
+
+<P>U<SUB>1</SUB> :</P>
+<SCRIPT>
+var reponsenum11 = new String('-3,83V'); 
+N(11, 'U<SUB>1</SUB> = ');
+</SCRIPT>
+
+<P>U<SUB>2</SUB> :</P>
+<SCRIPT>
+var reponsenum12 = new String('-8,17V'); 
+N(12, 'U<SUB>2</SUB> = ');
+</SCRIPT>
+
+<HR size="4">
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+</BODY>
+</HTML>
