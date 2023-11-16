@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+   <TITLE>mailles</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(5);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#maille", "mailles3.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR class=barre>
+<!--*********************************************************************-->
+<!--******************* champ question réponse **************************-->
+<!--*********************************************************************-->
+<BR>
+<H3>
+Calculs dans une maille.
+</H3>
+
+<BR>Dans le montage de la figure suivante, on a mesur&eacute; : <font color=#0000FF>U<SUB>BA</SUB></font>
+= 10V, <font color=#0000FF>U<SUB>AE</SUB></font> = 20V et <font color=#0000FF>U<SUB>CD</SUB></font> = 5V.
+<BR>
+En prenant le point <font color=#00FF00>E</font> comme r&eacute;f&eacute;rence des potentiels (<font color=#0000FF>V<sub>E</sub></font> = 0V),
+calculez les potentiels des points <font color=#00FF00>A</font>, <font color=#00FF00>B</font>, <font color=#00FF00>C</font>, <font color=#00FF00>E</font> et <font color=#00FF00>F</font>.
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=321>
+<TR><TD VALIGN="MIDDLE" HEIGHT=199>
+<P><IMG SRC="Image33.gif" WIDTH=317 HEIGHT=194></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<OL>
+<LI><font color=#0000FF>V<SUB>A</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum0 = new String('20V'); 
+N(0, '<font color=#0000FF>V<SUB>A</SUB></font> = ');
+</SCRIPT>
+
+<LI><font color=#0000FF>V<SUB>B</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum1 = new String('30V'); 
+N(1, '<font color=#0000FF>V<SUB>B</SUB></font> = ');
+</SCRIPT>
+
+<LI><font color=#0000FF>V<SUB>C</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum2 = new String('5V'); 
+N(2, '<font color=#0000FF>V<SUB>C</SUB></font> = ');
+</SCRIPT>
+
+<LI><font color=#0000FF>V<SUB>D</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum3 = new String('0V'); 
+N(3, '<font color=#0000FF>V<SUB>D</SUB></font> = ');
+</SCRIPT>
+
+<LI><font color=#0000FF>V<SUB>E</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum4 = new String('0V'); 
+N(4, '<font color=#0000FF>V<SUB>E</SUB></font> = ');
+</SCRIPT>
+
+<LI><font color=#0000FF>V<SUB>F</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum5 = new String('0V'); 
+N(5, '<font color=#0000FF>V<SUB>F</SUB></font> = ');
+</SCRIPT>
+
+</OL>
+<BR>
+<HR class=barre>
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+</BODY>
+</HTML>

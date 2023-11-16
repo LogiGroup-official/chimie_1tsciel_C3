@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+   <TITLE>mailles</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(5);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#maille", "", "mailles2.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR class=barre>
+<!--*********************************************************************-->
+<!--******************* champ question réponse **************************-->
+<!--*********************************************************************-->
+<BR>
+<H3>
+<P>On donne le circuit suivant :</P>
+</H3>
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=369>
+<TR><TD VALIGN="MIDDLE" HEIGHT=257>
+<P><IMG SRC="Image35.gif" WIDTH=350 HEIGHT=267></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<OL>
+<LI>Donner la loi des mailles reliant <font color=#0000FF>U<SUB>1</SUB></font>,
+ <font color=#0000FF>U<SUB>2</SUB></font>, <font color=#0000FF>U<SUB>3</SUB></font> et <font color=#0000FF>U<SUB>4</SUB></font>.</P>
+<SCRIPT>
+var reponseFormelle0 = 'U3=U1+U2+U4'; 
+F_Equivalence(0);
+</SCRIPT>
+
+
+<LI>Donner la valeur de <font color=#0000FF>U<SUB>4</SUB></font> (observez bien le sch&eacute;ma).</LI>
+<SCRIPT>
+var reponsenum1 = new String('0V'); 
+N(1, '<font color=#0000FF>U<SUB>4</SUB></font> = ');
+</SCRIPT>
+
+<LI>En d&eacute;duire une loi des mailles reliant <font color=#0000FF>U<SUB>1</SUB></font>, <font color=#0000FF>U<SUB>2</SUB></font> et <font color=#0000FF>U<SUB>3</SUB></font>.</LI>
+<SCRIPT>
+var reponseFormelle2 = 'U3=U1+U2'; 
+F_Equivalence(2);
+</SCRIPT>
+
+<LI>Exprimer <font color=#0000FF>U<SUB>1</SUB></font> en fonction des autres termes.</LI>
+<SCRIPT>
+var reponseFormelle3 = 'U1=U3-U2'; 
+F_Canonique(3);
+</SCRIPT>
+
+<BR>
+<LI>On donne <font color=#0000FF>U<SUB>2</SUB></font> = 5 V et <font color=#0000FF>U<SUB>3</SUB></font> = 2 V.</LI>
+<P>Calculer <font color=#0000FF>U<SUB>1</SUB></font>.
+</OL>
+<SCRIPT>
+var reponsenum4 = new String('-3V'); 
+N(4, '<font color=#0000FF>U<SUB>1</SUB></font> = ');
+</SCRIPT>
+
+<BR>
+<HR class=barre>
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+</BODY>
+</HTML>

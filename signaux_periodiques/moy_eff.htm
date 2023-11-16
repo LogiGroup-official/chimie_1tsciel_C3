@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+   <TITLE>Exercice sur valeurs moyennes et valeurs efficaces</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(5);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#signal", "signal.htm", "QCM_composantes.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<SH2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre"><sup>0</sup></div>
+</div>
+<br>
+
+<hr size=4 align=center width="80%">
+
+<!--************************ texte           ****************************-->
+<H1>Valeur moyenne et valeur efficace</H1>
+<P class=rem>Rem : </P>
+<DIR>
+<DIR>
+<P>Les r&eacute;sultats seront arrondis &agrave; 3 chiffres significatifs.</P>
+</DIR>
+</DIR>
+
+<H2>Exercice I</H2>
+<P>Soit le signal u(t) suivant :</P>
+<P align=center><IMG SRC="Image193.gif" WIDTH=303 HEIGHT=163></P>
+<OL TYPE="a">
+
+<LI>Calculer sa valeur moyenne &lt; u &gt;<BR>
+<!--*********************************************************************-->
+<!--*******************  rep = 0,5 V ************************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponsenum0 = new String('0,5 V');
+
+<!--APPEL de la fonction d'affichage et de test avec renvoie du message-->
+N(0, '&lt; u &gt; = ');
+</SCRIPT>
+</LI>
+<LI>Calculer sa valeur efficace U<BR>
+<!--*********************************************************************-->
+<!--*******************  rep = 1,58 V ***********************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponsenum1 = new String('1,58 V');
+<!--APPEL de la fonction d'affichage et de test avec renvoie du message-->
+N(1,'U = ');
+</SCRIPT>
+</LI>
+</OL>
+
+<H2>Exercice II</H2>
+<P>Soit le signal v(t) suivant :</P>
+<P align=center><IMG SRC="Image194.gif" WIDTH=276 HEIGHT=144></P>
+<P>Calculer sa valeur moyenne &lt; v &gt;</P>
+<!--*********************************************************************-->
+<!--*******************  rep = 1V  **************************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponsenum2 = new String('1V');
+<!--APPEL de la fonction d'affichage et de test avec renvoie du message-->
+N(2, '&lt; v &gt; = ');
+</SCRIPT>
+
+
+<H2>Exercice III</H2>
+<P>Soit le signal w(t) suivant :</P>
+<P align=center><IMG SRC="Image195.gif" WIDTH=303 HEIGHT=163></P>
+<OL TYPE="a">
+<LI>Calculer sa valeur moyenne &lt; w &gt;<BR>
+<!--*********************************************************************-->
+<!--*******************  rep = 2 V  *************************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponsenum3 = new String('2V');
+<!--APPEL de la fonction d'affichage et de test avec renvoie du message-->
+N(3, '&lt; w &gt; = ');
+</SCRIPT>
+</LI>
+<LI>Calculer sa valeur efficace W<BR>
+<!--*********************************************************************-->
+<!--*******************  rep = 2,24 V ************************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponsenum4 = new String('2,24 V');
+
+<!--APPEL de la fonction d'affichage et de test avec renvoie du message-->
+N(4, 'W = ');
+</SCRIPT>
+</LI>
+</OL>
+
+
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

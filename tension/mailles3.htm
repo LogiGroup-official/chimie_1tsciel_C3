@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+   <TITLE>mailles</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(4);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#maille", "mailles1.htm", "mailles4.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR class=barre>
+<!--*********************************************************************-->
+<!--******************* champ question réponse **************************-->
+<!--*********************************************************************-->
+<BR>
+<H3>Pour le circuit suivant on donne :</H3>
+<P ALIGN="CENTER"><CENTER><font color=#0000FF>U<SUB>1</SUB></font> = 5 V, <font color=#0000FF>U<SUB>3</SUB></font> = 2 V et <font color=#0000FF>U<SUB>6</SUB></font> = 3 V.</CENTER></P>
+<P>Calculer les autres tensions.</P>
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=506>
+<TR><TD VALIGN="MIDDLE" HEIGHT=299>
+<P><IMG SRC="Image34.gif" WIDTH=501 HEIGHT=295></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+<OL>
+<LI><font color=#0000FF>U<SUB>4</SUB></font> (bien observer le sch&eacute;ma) :</LI>
+<SCRIPT>
+var reponsenum2 = new String('0V'); 
+N(2, '<font color=#0000FF>U<SUB>4</SUB></font> = ');
+</SCRIPT>
+<LI><font color=#0000FF>U<SUB>D</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum3 = new String('4V');
+N(3, '<font color=#0000FF>U<SUB>D</SUB></font> = ');
+</SCRIPT>
+<LI><font color=#0000FF>U<SUB>2</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum0 = new String('-5V'); 
+N(0, '<font color=#0000FF>U<SUB>2</SUB></font> = ');
+</SCRIPT>
+<LI><font color=#0000FF>U<SUB>5</SUB></font> :</LI>
+<SCRIPT>
+var reponsenum1 = new String('7V'); 
+N(1, '<font color=#0000FF>U<SUB>5</SUB></font> = ');
+</SCRIPT>
+</OL>
+<BR>
+<HR class=barre>
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+</BODY>
+</HTML>

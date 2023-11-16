@@ -1,0 +1,247 @@
+<HTML>
+<HEAD>
+   <TITLE>Tension &eacute;lectrique</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+
+</HEAD>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(6);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#tension", "cours_tension.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR class=barre>
+<!--*********************************************************************-->
+<!--****************** rep == 100 mWb ***********************************-->
+<!--*********************************************************************-->
+<H3>Cocher les assertions <B>justes</B> :</H3>
+
+<SCRIPT>
+
+var reponseQCM0 = new Array(false, false, true, true, false);
+var alternatives0 = new Array(
+        "La tension &eacute;lectrique se mesure en watts (symbole W).",
+        "La tension &eacute;lectrique se mesure en un point d'un circuit &eacute;lectrique.",
+        "La tension &eacute;lectrique est aussi appel&eacute;e \u0022diff&eacute;rence de potentiel\u0022 car elle se mesure entre deux points.",
+        "La tension &eacute;lectrique est aussi appel&eacute;e \u0022force &eacute;lectromotrice\u0022 car elle provoque le d&eacute;placement des &eacute;lectrons (quand c'est possible).",
+        "Dans un dip&ocirc;le &eacute;lectrique résistif il peut y avoir du courant &eacute;lectrique sans qu'il y ait de tension entre ses bornes.");
+
+qcmv(0, alternatives0);
+
+</SCRIPT>
+<H3>Cocher les assertions <B>justes</B> :</H3>
+
+<SCRIPT>
+
+var reponseQCM1 = new Array(true, false, false, true, true, true);
+var alternatives1 = new Array(
+        "Plus la tension &eacute;lectrique est &eacute;lev&eacute;e aux bornes d'un dip&ocirc;le r&eacute;sistif, plus l'intensit&eacute; du courant &eacute;lectrique le traversant sera &eacute;lev&eacute;e.",
+        "La tension &eacute;lectrique se mesure en &eacute;lectron-volt (symbole eV).",
+        "La tension &eacute;lectrique aux bornes d'un interrupteur ouvert est toujours nulle (ou proche de z&eacute;ro).",
+        "La tension &eacute;lectrique aux bornes d'un interrupteur ferm&eacute; est toujours nulle (ou proche de z&eacute;ro).",
+        "La tension &eacute;lectrique aux bornes d'un fil &eacute;lectrique est toujours nulle (ou proche de z&eacute;ro).",
+        "L'intensit&eacute; du courant &eacute;lectrique dans un dip&ocirc;le r&eacute;sistif est nulle si et seulement si la tension entre ses bornes est nulle.");
+
+qcmv(1, alternatives1);
+
+</SCRIPT>
+
+<H3>Cocher les assertions <B>justes</B> :</H3>
+
+<SCRIPT>
+
+var reponseQCM2 = new Array(false, false, false, true, false, true);
+var alternatives2 = new Array(
+        "La tension &eacute;lectrique et le courant &eacute;lectrique sont deux ph&eacute;nom&egrave;nes physiques identiques.",
+        "La tension &eacute;lectrique et la puissance &eacute;lectrique sont deux ph&eacute;nom&egrave;nes physiques identiques.",
+        "La tension &eacute;lectrique s'exprime en volts (symbole V) et se mesure avec un amp&egrave;rem&egrave;tre.",
+        "Par d&eacute;finition <font color=#0000FF>U<SUB>AB</SUB></font> = <font color=#0000FF>U<SUB>A</SUB></font> - <font color=#0000FF>U<SUB>B</SUB></font>. Avec <font color=#0000FF>U<SUB>AB</SUB></font> diff&eacute;rence de potentiel entre <font color=#00A000>A</font> et <font color=#00A000>B</font>, <font color=#0000FF>U<SUB>A</SUB></font> potentiel en <font color=#00A000>A</font> et <font color=#0000FF>U<SUB>B</SUB></font> potentiel en <font color=#00A000>B</font>.",
+        "La tension &eacute;lectrique est une grandeur positive ou nulle.",
+        "<font color=#0000FF>U<SUB>AB</SUB></font> = -<font color=#0000FF>U<SUB>BA</SUB></font>.");
+
+qcmv(2, alternatives2);
+
+</SCRIPT>
+
+<H3>Cocher les assertions <B>justes</B><SUB> </SUB>:</H3>
+
+<SCRIPT>
+
+var reponseQCM3 = new Array(true, true, false, true, true);
+var alternatives3 = new Array(
+        "La tension &eacute;lectrique est une grandeur alg&eacute;brique.",
+        "La tension &eacute;lectrique s'exprime en volts (symbole V) et peut se mesurer avec un multim&egrave;tre.",
+        "<font color=#0000FF>U<SUB>AB</SUB></font> - <font color=#0000FF>U<SUB>BA</SUB></font> = 2*<font color=#0000FF>U<SUB>BA</SUB></font>",
+        "La tension &eacute;lectrique est nulle aux bornes d'un court-circuit.",
+        "<font color=#0000FF>U<SUB>AB</SUB></font> = -<font color=#0000FF>U<SUB>BA</SUB></font>.");
+
+qcmv(3, alternatives3);
+
+</SCRIPT>
+
+<H3>Mesure d'une tension avec un voltmètre numérique</H3>
+<P align="left">Si la borne masse (borne noire ou &quot;COM&quot;) d'un voltmètre
+est reliée à un point <font color=#00AO00>D</font> quelconque d'un circuit et sa borne d'entrée (borne rouge ou &quot;V&quot;) à
+un point <font color=#00AO00>C</font> (quelconque lui aussi) d'un circuit, quelle est la tension mesurée ? </P>
+<SCRIPT>
+
+var reponseQCM4 = new Array(false, true, false, false);
+var alternatives4 = new Array(
+        "<font color=#0000FF>U<SUB>DC</SUB></font>",
+        "<font color=#0000FF>U<SUB>CD</SUB></font>",
+        "<font color=#0000FF>V<SUB>C</SUB></font>",
+        "<font color=#0000FF>V<SUB>D</SUB></font>");
+
+qcmh(4, alternatives4);
+
+</SCRIPT>
+<!--*********************************************************************-->
+<!--****************** rep == UBC+UCD+UDE = UBE *************************-->
+<!--*********************************************************************-->
+<SCRIPT language="JavaScript"> 
+<!-- 
+function champtextpart(form) 
+{ 
+  var val=form.NOM.value;                 //valeur réponse
+  val = val.toLowerCase();                //valeur réponse minuscule
+  var toto = new Array;
+  var bool = true;                        //booléen test de réponse
+  var temp = new String;
+  var rep = new String;
+//suppression espaces
+  for(i=0; i<val.length; i++)
+  {
+    if (val.charCodeAt(i)!=32)
+    { 
+      rep += val.charAt(i);
+    }
+  }
+  toto += rep.split("+");                //nombre de réponses
+  toto = toto.split("=");
+  temp += toto.join(); 
+  toto = temp.split(",");
+
+  bool = (toto.length==4);            //calcul nombre de réponses
+
+  //test réponse avec match
+  bool = bool&&(Boolean)(rep.match(/ubc/))&&(Boolean)(rep.match(/\+ucd/));
+  bool = bool&&(Boolean)(rep.match(/\+ude/))&&(Boolean)(rep.match(/=ube/));
+
+  if (document.avis5.NOM.value.length == 0) 
+  { 
+    alert("Il n'y a pas de réponse"); 
+    return(0);
+  }
+  else if (!bool)
+  {
+    alert("reponse fausse !");
+    return(0);
+  } 
+  else
+  {
+    alert("reponse correcte !");
+    return(1); 
+  }
+} 
+--> 
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--****************** rep == f,f,v,f,v *********************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+var reponseoption5 = new Array(2, 2, 1, 2, 1);
+</SCRIPT>
+<H3>Vrai ou faux?</H3>
+
+<P>Les affirmations suivantes sont-elles vraies ou fausses ? </P>
+
+<FORM name="form5">
+    <TABLE border="0" width="75%">
+        <TR>
+            <TD>1) La mesure d'une tension est toujours différente de zéro.</TD>
+            <TD><SELECT size="1">
+                <OPTION value="a"></OPTION>
+                <OPTION value="b">vrai.&nbsp;</OPTION>
+                <OPTION value="c">faux.&nbsp;</OPTION>
+            </SELECT></TD>
+        </TR>
+        <TR>
+            <TD>2) <font color=#0000FF>V<SUB>A</SUB></font> - <font color=#0000FF>V<SUB>B</SUB></font> - <font color=#0000FF>V<SUB>C</SUB></font> = <font color=#0000FF>U<SUB>AB</SUB></font>.</TD>
+            <TD><SELECT size="1">
+                <OPTION value="a"></OPTION>
+                <OPTION value="b">vrai.&nbsp;</OPTION>
+                <OPTION value="c">faux.&nbsp;</OPTION>
+            </SELECT></TD>
+        </TR>
+        <TR>
+            <TD>3) Une différence de potentiel électrique se mesure entre deux points.</TD>
+            <TD><SELECT size="1">
+                <OPTION value="a"></OPTION>
+                <OPTION value="b">vrai.&nbsp;</OPTION>
+                <OPTION value="c">faux.&nbsp;</OPTION>
+            </SELECT></TD>
+        </TR>
+        <TR>
+            <TD>4) <font color=#0000FF>U<SUB>AC</SUB></font> = <font color=#0000FF>U<SUB>AB</SUB></font> + <font color=#0000FF>U<SUB>CB</SUB></font>.</TD>
+            <TD><SELECT size="1">
+                <OPTION value="a"></OPTION>
+                <OPTION value="b">vrai.&nbsp;</OPTION>
+                <OPTION value="c">faux.&nbsp;</OPTION>
+            </SELECT></TD>
+        </TR>
+        <TR>
+            <TD>5) La tension aux bornes d'un dipôle passif non alimenté est toujours nulle.</TD>
+            <TD><SELECT size="1">
+                <OPTION value="a"></OPTION>
+                <OPTION value="b">vrai.&nbsp;</OPTION>
+                <OPTION value="c">faux.&nbsp;</OPTION>
+            </SELECT></TD>
+        </TR>
+    </TABLE>
+</FORM>
+<DIV align=right>
+<FORM name="Corrige5">
+<INPUT type="button" name="Note" value="Résultat" 
+onclick="boolpage[5]=champtestoption(form5, reponseoption5, Corrige5[0]);vu_metre();">
+</FORM>
+</DIV>
+
+<HR class=barre>
+
+<BR>
+<BR>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

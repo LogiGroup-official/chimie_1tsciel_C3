@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+<TITLE>Composante continue / composante alternative</TITLE>
+ <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/FOND.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(3);
+var boolpage = new Array();
+for (i = 0; i < nbrechamps; i++) boolpage[i] = 0;
+<!--configuration des liens-->
+lien("#signal", "moy_eff.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<SH2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre"><sup>0</sup></div>
+</div>
+<br>
+
+<hr size=4 align=center width="80%">
+
+<!--************************ texte           ****************************-->
+
+<H1>Composante continue et composante alternative</H1>
+<H2>exercice</H2>
+<P>Pour chaque forme de signal ci-dessous, cocher l'aspect de la valeur moyenne et de la composante alternative qui le constituent.</P>
+<P ALIGN="CENTER"><IMG SRC="Image18.gif" WIDTH=305 HEIGHT=192></P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = true, false, false, false, true, false, false *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponseQCM0 = new Array(true, false, false, false, true, false, false);
+<!--alternatives de la réponse numéro 0-->
+var alternatives0 = new Array(
+"<P ALIGN='CENTER'><IMG SRC='Image19.gif' WIDTH=211 HEIGHT=130>", 
+"<P ALIGN='CENTER'><IMG SRC='Image20.gif' WIDTH=246 HEIGHT=144>", 
+"<P ALIGN='CENTER'><IMG SRC='Image21.gif' WIDTH=233 HEIGHT=128>", 
+"<P ALIGN='CENTER'><IMG SRC='Image22.gif' WIDTH=209 HEIGHT=109>", 
+"<P ALIGN='CENTER'><IMG SRC='Image23.gif' WIDTH=281 HEIGHT=156>", 
+"<P ALIGN='CENTER'><IMG SRC='Image24.gif' WIDTH=305 HEIGHT=152>", 
+"<P ALIGN='CENTER'><IMG SRC='Image25.gif' WIDTH=242 HEIGHT=133>");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(0);
+</SCRIPT>
+<P>&nbsp;</P>
+<hr class = barre>
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><IMG SRC="Image26.gif" WIDTH=242 HEIGHT=148></P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = false, true, false, false, false, false, true *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponseQCM1 = new Array(false, true, false, false, false, false, true);
+<!--alternatives de la réponse numéro 1-->
+var alternatives1 = new Array(
+"<P ALIGN='CENTER'><IMG SRC='Image19.gif' WIDTH=211 HEIGHT=130>", 
+"<P ALIGN='CENTER'><IMG SRC='Image20.gif' WIDTH=246 HEIGHT=144>", 
+"<P ALIGN='CENTER'><IMG SRC='Image21.gif' WIDTH=233 HEIGHT=128>", 
+"<P ALIGN='CENTER'><IMG SRC='Image22.gif' WIDTH=209 HEIGHT=109>", 
+"<P ALIGN='CENTER'><IMG SRC='Image23.gif' WIDTH=281 HEIGHT=156>", 
+"<P ALIGN='CENTER'><IMG SRC='Image26.gif' WIDTH=242 HEIGHT=148>", 
+"<P ALIGN='CENTER'><IMG SRC='Image25.gif' WIDTH=242 HEIGHT=133>");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(1);
+</SCRIPT>
+<P>&nbsp;</P>
+<hr class = barre>
+<P>&nbsp;</P>
+<P ALIGN="CENTER"><IMG SRC="Image27.gif" WIDTH=301 HEIGHT=150></P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = false, false, true, false, false, true, false *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponseQCM2 = new Array(false, false, true, false, false, true, false);
+<!--alternatives de la réponse numéro 2-->
+var alternatives2 = new Array(
+"<P ALIGN='CENTER'><IMG SRC='Image28.gif' WIDTH=211 HEIGHT=130>", 
+"<P ALIGN='CENTER'><IMG SRC='Image29.gif' WIDTH=246 HEIGHT=104>", 
+"<P ALIGN='CENTER'><IMG SRC='Image21.gif' WIDTH=233 HEIGHT=128>", 
+"<P ALIGN='CENTER'><IMG SRC='Image22.gif' WIDTH=209 HEIGHT=109>", 
+"<P ALIGN='CENTER'><IMG SRC='Image30.gif' WIDTH=301 HEIGHT=150>", 
+"<P ALIGN='CENTER'><IMG SRC='Image31.gif' WIDTH=240 HEIGHT=108>", 
+"<P ALIGN='CENTER'><IMG SRC='Image25.gif' WIDTH=242 HEIGHT=133>");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(2);
+</SCRIPT>
+
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>
+

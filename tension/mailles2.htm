@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+   <TITLE>Mailles</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(6);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#maille", "mailles1.htm", "mailles3.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<hr class=barre>
+
+
+<H3>Soit le montage suivant :</H3>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4>
+<TR><TD VALIGN="MIDDLE">
+<P><img width=287 height=281 src="image001.gif"></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<P>On donne : <FONT COLOR="#0000ff">U<SUB>Z</SUB></FONT> = 5,1V, <FONT COLOR="#0000ff">V<SUB>CC</SUB></FONT> = 12 V, <FONT COLOR="#0000ff">U<SUB>R2</SUB></FONT> = 3V et <FONT COLOR="#0000ff">V<SUB>BE</SUB></FONT> = 0,7V</P>
+<OL>
+
+<LI>Donner l'expression de <FONT COLOR="#0000ff">U<SUB>R1</SUB></FONT> en fonction de <FONT COLOR="#0000ff">V<SUB>CC</SUB></FONT> et <FONT COLOR="#0000ff">U<SUB>Z</SUB></FONT> :</LI>
+<!--*********************************************************************-->
+<!--*******************  rep = UR1=VCC-UZ *******************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponseFormelle0 = 'UR1=VCC-UZ';
+F_C(0);
+</SCRIPT>
+<LI>En d&eacute;duire la valeur de <FONT COLOR="#0000ff">U<SUB>R1</SUB></FONT> :</LI>
+<!--*********************************************************************-->
+<!--*******************  rep = 6,9V *************************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponsenum1 = new String('6,9V');
+N(1, '<FONT COLOR="#0000ff">U<SUB>R1</SUB></FONT> = ');
+</SCRIPT>
+<LI>Donner l'expression de <FONT COLOR="#0000ff">U<SUB>R3</SUB></FONT> en fonction de <FONT COLOR="#0000ff">U<SUB>Z</SUB></FONT> et <FONT COLOR="#0000ff">V<SUB>BE</SUB></FONT> :</LI>
+<!--*********************************************************************-->
+<!--*******************  rep =  UR3 = UZ - VBE **************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponseFormelle2 = 'UR3 = UZ - VBE';
+F_C(2);
+</SCRIPT>
+<LI>En d&eacute;duire la valeur de <FONT COLOR="#0000ff">U<SUB>R3</SUB></FONT> :</LI>
+<!--*********************************************************************-->
+<!--*******************  rep = 4,4V *************************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponsenum3 = new String('4,4V');
+N(3, '<FONT COLOR="#0000ff">U<SUB>R3</SUB></FONT> = ');
+</SCRIPT>
+<LI>Donner l'expression de <FONT COLOR="#0000ff">V<SUB>CE</SUB></FONT> en fonction de <FONT COLOR="#0000ff">V<SUB>CC</SUB></FONT>, <FONT COLOR="#0000ff">U<SUB>R2</SUB></FONT> et <FONT COLOR="#0000ff">U<SUB>R3</SUB></FONT> :</LI>
+
+<!--*********************************************************************-->
+<!--*******************  rep = VCE=VCC-UR3-UR2 **************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponseFormelle4 = 'VCE=VCC-UR3-UR2';
+F_C(4);
+</SCRIPT>
+<LI>En d&eacute;duire la valeur de <FONT COLOR="#0000ff">V<SUB>CE</SUB></FONT> :</LI></OL>
+<!--*********************************************************************-->
+<!--*******************  rep = 4,6V *************************************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponsenum5 = new String('4,6V');
+N(5, '<FONT COLOR="#0000ff">V<SUB>CE</SUB></FONT> = ');
+</SCRIPT>
+
+<hr class=barre>
+
+<<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>
