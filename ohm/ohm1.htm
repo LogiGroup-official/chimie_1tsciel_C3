@@ -1,0 +1,203 @@
+<HTML>
+<HEAD>
+   <TITLE>Loi d'Ohm</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(12);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#ohm", "ohm.htm", "ohm2.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR size="4">
+
+<H3>
+Utilisation de la loi d'Ohm
+</H3>
+<!--*********************************************************************-->
+<!--******************* loi d'ohm en récepteur **************************-->
+<!--*********************************************************************-->
+<OL>
+
+<LI>Un dip&ocirc;le est annot&eacute; en convention r&eacute;cepteur. On note <font color=#0000FF>U</font> la tension &agrave; ses bornes, R la valeur de sa r&eacute;sistance et <font color=#FF0000>I</font> l'intensit&eacute; du courant qui le traverse.</LI>
+
+
+<CENTER>
+<P ALIGN="CENTER"><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=248>
+<TR><TD VALIGN="MIDDLE" HEIGHT=133>
+<P ALIGN="CENTER"><IMG SRC="Image54.gif" WIDTH=218 HEIGHT=125></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<OL TYPE="a">
+<OL TYPE="a">
+<LI>Exprimer <font color=#0000FF>U</font> en fonction de R et <font color=#FF0000>I</font> :</LI>
+<SCRIPT>
+var reponseFormelle0 = 'U=R*I';
+F_Canonique(0);
+</SCRIPT>
+<LI>Exprimer <font color=#FF0000>I</font> en fonction de R et <font color=#0000FF>U</font> :</LI>
+<SCRIPT>
+var reponseFormelle1 = 'I=U/R';
+F_Canonique(1);
+</SCRIPT>
+<LI>Exprimer R en fonction de <font color=#0000FF>U</font> et <font color=#FF0000>I</font> :</LI>
+<SCRIPT>
+var reponseFormelle2 = 'R=U/I';
+F_Canonique(2);
+</SCRIPT>
+</OL>
+</OL>
+</OL>
+
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* loi d'ohm en générateur *************************-->
+<!--*********************************************************************-->
+
+<OL START=2>
+<LI>Le dip&ocirc;le de la question 1 est maintenant annot&eacute; en convention g&eacute;n&eacute;rateur. Enoncer la loi d'ohm.</LI>
+
+
+<SCRIPT>
+var reponseFormelle3 = 'U=-R*I';
+F_Equivalence(3);
+</SCRIPT>
+</OL>
+<HR size="4">
+
+<!--*********************************************************************-->
+<!--******************* application numérique ***************************-->
+<!--*********************************************************************-->
+<OL START=3>
+<LI>Quelle est l'intensit&eacute; du courant <font color=#FF0000>I</font> si R = 1,6 k<FONT FACE="Symbol">W</FONT> et <font color=#0000FF>U<SUB>AB</SUB></font> = 8V ?</LI>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=248>
+<TR><TD VALIGN="MIDDLE" HEIGHT=133>
+<P ALIGN="CENTER"><IMG SRC="Image53.gif" WIDTH=218 HEIGHT=125></P></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<SCRIPT>
+var reponsenum4 = new String('5mA');
+N(4, '<font color=#FF0000>I</font> = ');
+</SCRIPT>
+</OL>
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* application numérique ***************************-->
+<!--*********************************************************************-->
+<OL START=4>
+<LI>Dans le montage suivant, on veut calculer la valeur de la tension <font color=#0000FF>U<SUB>BC</SUB></font>.</LI>
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=248>
+<TR><TD VALIGN="MIDDLE" HEIGHT=133>
+<P ALIGN="CENTER"><IMG SRC="Image56.gif" WIDTH=202 HEIGHT=93></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<OL TYPE="a">
+<OL TYPE="a">
+
+<LI>Quelle est l'intensit&eacute; du courant <font color=#FF0000>I</font> si R<SUB>1</SUB> = 1,6 k<FONT FACE="Symbol">W</FONT> et <font color=#0000FF>U<SUB>AB</SUB></font> = 4V ?</LI>
+<SCRIPT>
+var reponsenum5 = new String('2,5mA');
+N(5, '<font color=#FF0000>I</font> = ');
+</SCRIPT>
+
+<LI>En d&eacute;duire la valeur de <font color=#0000FF>U<SUB>BC</SUB></font> si R<SUB>2</SUB> = 800 <FONT FACE="Symbol">W</FONT>.</LI>
+
+<SCRIPT>
+var reponsenum6 = new String('2V');
+N(6,'<font color=#0000FF>U<SUB>BC</SUB></font> = ');
+</SCRIPT>
+</OL>
+</OL>
+</OL>
+<HR size="4">
+
+<!--*********************************************************************-->
+<!--******************* application numérique ***************************-->
+<!--*********************************************************************-->
+<OL START=5>
+<LI>Par rapport au montage suivant :</LI>
+
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=201>
+<TR><TD VALIGN="MIDDLE" HEIGHT=144>
+<P ALIGN="CENTER"><IMG SRC="Image59.gif" WIDTH=180 HEIGHT=118></P></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<OL TYPE="a">
+<OL TYPE="a">
+
+<LI>Donner l'expression de <font color=#FF0000>I<SUB>1</SUB></font> en fonction de R<SUB>1</SUB> et <font color=#0000FF>U</font>.</LI>
+<SCRIPT>
+var reponseFormelle7 = 'I1=U/R1';
+F_Canonique(7);
+</SCRIPT>
+<LI>Donner la valeur de <font color=#FF0000>I<SUB>1</SUB></font> si <font color=#0000FF>U</font> = 12V et R<SUB>1</SUB> = 3 k<FONT FACE="Symbol">W</FONT>.</LI>
+<SCRIPT>
+var reponsenum8 = new String('4mA');
+N(8, '<font color=#FF0000>I<SUB>1</SUB></font> = ');
+</SCRIPT>
+
+<LI>Donner l'expression de <font color=#FF0000>I<SUB>2</SUB></font> en fonction de R<SUB>2</SUB> et <font color=#0000FF>U</font>.</LI>
+<SCRIPT>
+var reponseFormelle9 = 'I2=-U/R2';
+F_Canonique(9);
+</SCRIPT>
+
+<LI>Donner la valeur de <font color=#FF0000>I<SUB>2</SUB></font> si R<SUB>2</SUB> = 4 k<FONT FACE="Symbol">W</FONT>.</LI>
+<SCRIPT>
+var reponsenum10 = new String('-3mA');
+N(10, '<font color=#FF0000>I<SUB>2</SUB></font> = ');
+</SCRIPT>
+
+<LI>En d&eacute;duire la valeur de <font color=#FF0000>I</font>.</LI>
+<SCRIPT>
+var reponsenum11 = new String('7mA');
+N(11, '<font color=#FF0000>I</font> = ');
+</SCRIPT>
+
+</OL>
+</OL>
+</OL>
+
+<HR size="4">
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

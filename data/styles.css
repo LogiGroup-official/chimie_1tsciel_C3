@@ -1,0 +1,95 @@
+H1
+{
+    FONT-SIZE: 130%;
+    COLOR: red;
+    FONT-FAMILY: "Times New Roman";
+    text-align: left;
+    background-color: #D0D0D0
+}
+H2
+{
+    FONT-SIZE: 110%;
+    COLOR: red;
+    FONT-STYLE: italic;
+    FONT-FAMILY: 'Times New Roman';
+    text-align: left;
+    background-color: #E0E0E0
+}
+H3
+{
+    FONT-SIZE: 100%;
+    COLOR: green;
+    FONT-STYLE: italic;
+    FONT-FAMILY: 'Times New Roman';
+    text-align: left;
+    background-color: #E0E0E0
+}
+H4
+{
+    FONT-FAMILY: 'Times New Roman';
+    text-align: left;
+    background-color: #E0E0E0
+}
+.rem
+{
+    FONT: bold;
+    COLOR: #DD00DD
+}
+.envue
+{
+     FONT: bold;
+     color: #008080
+}
+.barre
+{
+      height:4px;
+      width:80%;
+      text-align:center
+}
+#gros
+{
+    FONT-SIZE: 130%;
+	FONT: bold;
+    COLOR: blue;
+    FONT-FAMILY: "Times New Roman";
+}
+A:link {
+  color : #0000FF;
+  font-size : 14px;
+  font-family : "Times";
+  text-decoration : underline;
+}
+A:visited {
+  color : #24249F;
+  font-size : 14px;
+  font-family : "Times";
+  text-decoration : underline;
+}
+A:hover {
+  /*COLOR: #000000;*/
+  BACKGROUND-COLOR: #EFEFEF
+}
+
+#Enveloppe {
+  /*width : 80%;*/
+  border-radius: 10px; 
+  background-color: #e00;
+  text-align: right; 
+  box-shadow: 8px 8px 5px #444;
+  background-image: linear-gradient(180deg, #f00, #b00 40%, #ccc);
+}
+  
+#maBarre {
+  border-radius: 10px;
+  width: 0%;
+  height: 25px;
+  background-color: #4CAF50;
+  text-align: right;
+  FONT-FAMILY: "Times";
+  line-height: 32px;
+  font-size: 25px;
+  color: blue; 
+  background-image: linear-gradient(180deg, #5f0, #4CAF50 40%, #ccc);
+}
+
+

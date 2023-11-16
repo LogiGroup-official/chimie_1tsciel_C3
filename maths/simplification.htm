@@ -1,0 +1,180 @@
+
+<HTML>
+<HEAD>
+<TITLE>transformation formules</TITLE>
+ <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/FOND.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(6);
+var boolpage = new Array();
+for (i = 0; i < nbrechamps; i++) boolpage[i] = 0;
+<!--configuration des liens-->
+lien("#maths", "", "transformation.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<hr class=barre>
+
+<h1>Priorit&eacute; des op&eacute;rations, Transformation de formule</h1>
+<h2>Priorit&eacute; des op&eacute;rations</h2>
+
+<P>Les expressions math&eacute;matiques doivent &ecirc;tre calcul&eacute;es en respectant les priorit&eacute;s suivantes&nbsp;:</P><DIR>
+<DIR>
+<DIR>
+<DIR>
+
+<P>1&#9;=>&#9;parenth&egrave;ses</P>
+<P>2&#9;=>&#9;fonctions (ex&nbsp;: sin, cos, exp.....)</P>
+<P>3&#9;=>&#9;produit et division.</P>
+<P>4&#9;=>&#9;addition et soustraction.</P>
+
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<h2>Simplification</h2>
+<P>On ne peut simplifier des termes d'une expression que si leur niveau de priorit&eacute; est le m&ecirc;me.</P>
+<P>Exemples&nbsp;: </P>
+<blockquote>
+  <blockquote>
+	<P><IMG SRC="Image70.gif" WIDTH=89 HEIGHT=21></P>
+  </blockquote>
+</blockquote>
+
+<h3>Exercice</h3>
+
+<P>Simplifiez (si c'est possible) les expressions suivantes &nbsp;:</P>
+<P>Remarque : on formulera la r&eacute;ponse sous la forme : rep = ... </P>
+<blockquote>
+  <blockquote>
+	<P><IMG SRC="Image71.gif" WIDTH=48 HEIGHT=41></P>
+  </blockquote>
+</blockquote>
+
+<!--************************************************************************-->
+<!--*******************  rep = b *******************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponseFormelle0 = "rep=b";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(0);
+</SCRIPT>
+<blockquote>
+  <blockquote>
+	<P><IMG SRC="Image72.gif" WIDTH=50 HEIGHT=41></P>
+  </blockquote>
+</blockquote>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = (a+b)/a *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponseFormelle1 = "rep=(a+b)/a";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(1);
+</SCRIPT>
+
+<blockquote>
+  <blockquote>
+	<P><IMG SRC="Image73.gif" WIDTH=48 HEIGHT=41></P>
+  </blockquote>
+</blockquote>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = 1/b *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponseFormelle2 = "rep=1/b";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(2);
+</SCRIPT>
+
+<blockquote>
+  <blockquote>
+	<P><IMG SRC="Image74.gif" WIDTH=72 HEIGHT=41></P>
+  </blockquote>
+</blockquote>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = b/a *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponseFormelle3 = "rep=b/a";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(3);
+</SCRIPT>
+
+<blockquote>
+  <blockquote>
+	<P><IMG SRC="Image75.gif" WIDTH=48 HEIGHT=41></P>
+  </blockquote>
+</blockquote>
+
+<!--************************************************************************-->
+<!--*******************  rep = 1 *******************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponseFormelle4 = "rep = 1";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(4);
+</SCRIPT>
+
+<blockquote>
+  <blockquote>
+	<P><IMG SRC="Image76.gif" WIDTH=54 HEIGHT=44></P>
+  </blockquote>
+</blockquote>
+
+<!--************************************************************************-->
+<!--*******************  rep = (a*b) ***************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponseFormelle5 = "rep=(a*b)";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(5);
+</SCRIPT>
+
+
+<hr class = barre>
+<BR>
+<BR>
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>
+

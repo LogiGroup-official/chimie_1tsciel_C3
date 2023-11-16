@@ -1,0 +1,163 @@
+
+<HTML>
+<HEAD>
+<TITLE>Equations de droites</TITLE>
+ <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/FOND.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(7);
+var boolpage = new Array();
+for (i = 0; i < nbrechamps; i++) boolpage[i] = 0;
+<!--configuration des liens-->
+lien("#maths", "unites.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<hr class=barre>
+
+<h1>Equation de droite</h1>
+<h3>Exercice 1</h3>
+<P>On donne la droite U = f(I) telle que U = U<SUB>0</SUB> -RI avec U<SUB>0</SUB> = 2V et R = 0,1&#937;</P>
+
+<P align="center"><IMG SRC="Image106.gif" WIDTH=309 HEIGHT=187></P>
+
+<P>Pr&eacute;cisez la valeur a de la pente de cette droite et la valeur de l'ordonn&eacute;e &agrave; l'origine b.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = -0,1 ****************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponsenum0 = "-0,1";
+<!--APPEL de la fonction d'affichage et de test-->
+N(0,'a= ');
+</SCRIPT>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = 2 *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponsenum1 = "2";
+<!--APPEL de la fonction d'affichage et de test-->
+N(1,'b= ');
+</SCRIPT>
+
+<P>Donner la valeur de <sub><sub><sub><sub><sub><sub><IMG SRC="Image107.gif" WIDTH=26 HEIGHT=41></sub></sub></sub></sub></sub></sub>.</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = -0,1 ****************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponsenum2 = "-0,1";
+<!--APPEL de la fonction d'affichage et de test-->
+N(2,'<sub><sub><sub><sub><sub><sub><IMG SRC="Image107.gif" WIDTH=26 HEIGHT=41></sub></sub></sub></sub></sub></sub> = ');
+</SCRIPT>
+
+
+<P>&nbsp;</P>
+<h3>Exercice 2</h3>
+<P>Pour la droite suivante&nbsp;:</P>
+<P align="center"><IMG SRC="Image109.gif" WIDTH=274 HEIGHT=190></P>
+
+<P>a) Donnez l'&eacute;quation de la droite v(t) en fonction de t. (on notera v = ...)</P>
+
+
+<!--************************************************************************-->
+<!--*******************  v=2000*t+1 *************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponseFormelle3 = "v=2000*t+1";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(3);
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P>b) Calculez la valeur de v(t) en t = 500&#956;s.</P>
+
+en t = 500&#956;s&nbsp;: 
+
+<!--************************************************************************-->
+<!--*******************  rep = 2V  *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponsenum4 = "2V ";
+<!--APPEL de la fonction d'affichage et de test-->
+N(4,'v(t)= ');
+</SCRIPT>
+
+<P>&nbsp;</P>
+<h3>Exercice 3</h3>
+<P align="center"><IMG SRC="Image110.gif" WIDTH=274 HEIGHT=177></P>
+
+<P>&nbsp;</P>
+<OL TYPE="a">
+
+<LI>Donnez l'&eacute;quation de v(t) en fonction de t. (on notera v = ...)</LI>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = v=(IM-Im)/(a*T)*t+Im *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponseFormelle5 = "v=(IM-Im)/(a*T)*t+Im";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(5);
+</SCRIPT>
+
+<LI>Exprimez v(t) en t = aT/2 (on notera v = ...)</LI>
+</OL>
+
+<DIR>
+
+<P>en t = aT/2&nbsp;: 
+
+<!--************************************************************************-->
+<!--*******************  v = (IM-Im)/2+Im *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 6-->
+var reponseFormelle6 = "v= (IM-Im)/2+Im";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(6);
+</SCRIPT></DIR>
+
+
+<hr class = barre>
+<BR>
+<BR>
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+</BODY>
+</HTML>
+

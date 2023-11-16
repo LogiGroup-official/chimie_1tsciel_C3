@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+   <TITLE>Exercice puissance et énergie</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+   
+   <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="*">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--déclaration d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--remplacer le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(14);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#energie", "QCM_puissance_energie.htm", "batteries.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre"><sup>0</sup></div>
+</div>
+<br>
+
+<hr size=4 align=center width="80%">
+
+<!--*********************** texte *****************************-->
+<P class=rem>Remarque&nbsp;: les valeurs num&eacute;riques seront arrondies &agrave; 3 chiffres significatifs.</P>
+
+<H3>Exercice 1</H3>
+<P>Soit une r&eacute;sistance R = 1000 <B>&#937;</B> et de puissance maximale P<SUB>max</SUB> = 1/4 watt = 0,25 W. </P>
+<P>Calculer U<SUB>max</SUB> </P>
+
+<!--************************************************************************-->
+<!--*******************  rep = 15,8V *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponsenum0 = "15,8V";
+<!--APPEL de la fonction d'affichage et de test-->
+N(0,'U<SUB>max</SUB> = ');
+</SCRIPT>
+<P>Calculer I<SUB>max</SUB>.</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  15,8mA *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponsenum1 = " 15,8mA";
+<!--APPEL de la fonction d'affichage et de test-->
+N(1,'I<SUB>max</SUB> = ');
+</SCRIPT>
+<H3>Exercice 2</H3>
+<P>Pour une tension U = 6V &agrave; ses bornes, calculer la puissance P re&ccedil;ue par une r&eacute;sistance R = 470&#937;.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  76,6 mW *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponsenum2 = " 76,6 mW";
+<!--APPEL de la fonction d'affichage et de test-->
+N(2,'P = ');
+</SCRIPT>
+
+<P>Que devient cette puissance&nbsp;?</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = false, true, false, false *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponseQCM3 = new Array(false, true, false, false);
+<!--alternatives de la réponse numéro 3-->
+var alternatives3 = new Array(
+"Elle disparait.", 
+"Elle est convertie en chaleur.", 
+"Elle ressort de l'autre c&ocirc;t&eacute; de la r&eacute;sistance.", 
+"Elle retourne au g&eacute;n&eacute;rateur.");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(3);
+</SCRIPT>
+
+
+<P>Cette r&eacute;sistance pouvant dissiper une puissance de 1W, calculer ses limites d'utilisation I<SUB>max</SUB> et U<SUB>max</SUB>.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  21,7V *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponsenum4 = " 21,7V";
+<!--APPEL de la fonction d'affichage et de test-->
+N(4,'U<SUB>max</SUB> = ');
+</SCRIPT>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  46,1mA *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponsenum5 = " 46,1mA";
+<!--APPEL de la fonction d'affichage et de test-->
+N(5,'I<SUB>max</SUB> = ');
+</SCRIPT>
+
+<H3>Exercice 3</H3>
+<P>Un fer &agrave; souder de poche porte les indications suivantes : <B>12 V</B> et <B>60 W</B>.</P>
+<P>Calculer l'&eacute;nergie E (en Joule) qu'il consomme en <B>1 min</B>.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  3600 J *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 6-->
+var reponsenum6 = " 3600 J";
+<!--APPEL de la fonction d'affichage et de test-->
+N(6,'E = ');
+</SCRIPT>
+
+<P>Calculer l'&eacute;nergie E (en Wh) qu'il consomme en <B>1 min</B>.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  1 Wh *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 7-->
+var reponsenum7 = " 1 Wh";
+<!--APPEL de la fonction d'affichage et de test-->
+N(7,'E = ');
+</SCRIPT>
+
+<P>Calculer l'intensit&eacute; du courant I qui le traverse.</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  5A *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 8-->
+var reponsenum8 = " 5A";
+<!--APPEL de la fonction d'affichage et de test-->
+N(8,'I = ');
+</SCRIPT>
+
+
+<H3>Exercice 4</H3>
+<P>Une lampe de phare d'automobile porte les indications suivantes : <B>12 V&nbsp;; 55 W</B>.</P>
+<P>La fraction d'&eacute;nergie absorb&eacute;e par la lampe et qui est transform&eacute;e en lumi&egrave;re visible est &#951; = 10%, le reste est perdu sous forme de chaleur ou de lumi&egrave;re non visible.</P>
+<P>Calculer <B>LA PUISSANCE</B> transform&eacute;e en lumi&egrave;re P<SUB>lum</SUB> et celle qui est perdue P<SUB>perte</SUB>.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  5,5W *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 9-->
+var reponsenum9 = " 5,5W";
+<!--APPEL de la fonction d'affichage et de test-->
+N(9,'P<SUB>lum</SUB> = ');
+</SCRIPT>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  49,5W *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 10-->
+var reponsenum10 = " 49,5 W";
+<!--APPEL de la fonction d'affichage et de test-->
+N(10,'P<SUB>perte</SUB> = ');
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P>Calculer <B>L'ENERGIE</B> totale <B>E</B> consomm&eacute;e en Wh pour <B>15 min</B> de fonctionnement.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  13,8Wh *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 11-->
+var reponsenum11 = " 13,8Wh";
+<!--APPEL de la fonction d'affichage et de test-->
+N(11,'E = ');
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P>En d&eacute;duire l'&eacute;nergie transform&eacute;e en lumi&egrave;re E<SUB>lum</SUB> et celle qui est perdue E<SUB>pertes</SUB> pour <B>15 min</B> de fonctionnement (en Wh).</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  1,38Wh *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 12-->
+var reponsenum12 = " 1,38Wh";
+<!--APPEL de la fonction d'affichage et de test-->
+N(12,'E<SUB>lum</SUB> = ');
+</SCRIPT>
+
+
+<!--************************************************************************-->
+<!--*******************  rep =  12,4J *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 13-->
+var reponsenum13 = " 12,4Wh";
+<!--APPEL de la fonction d'affichage et de test-->
+N(13,'E<SUB>pertes</SUB> = ');
+</SCRIPT>
+
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

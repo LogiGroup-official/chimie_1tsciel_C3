@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+   <TITLE>Loi d'Ohm</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(7);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#ohm", "ohm1.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* loi d'ohm ***************************************-->
+<!--*********************************************************************-->
+
+<H3>
+<P>Dans le circuit suivant, R<SUB>1</SUB> = 2 k<FONT FACE="Symbol">W, </FONT> R<SUB>2</SUB> = 4 k<FONT FACE="Symbol">W</FONT>, R<SUB>3</SUB> = 2 k<FONT FACE="Symbol">W</FONT>, I<SUB>3</SUB> = -3 mA.</P>
+</H3>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=287>
+<TR><TD VALIGN="MIDDLE" HEIGHT=190>
+<P ALIGN="CENTER"><IMG SRC="Image61.gif" WIDTH=272 HEIGHT=145></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<OL TYPE="a">
+<OL TYPE="a">
+<OL TYPE="a">
+
+<LI>Donner l'expression de <font color=#0000FF>U<SUB>3</SUB></font> avec la loi d'Ohm.</LI>
+<SCRIPT>
+var reponseFormelle0 = 'U3=-R3*I3';
+F_Canonique(0);
+</SCRIPT>
+
+<LI>Calculer <font color=#0000FF>U<SUB>3</SUB></font>.</LI>
+<SCRIPT>
+var reponsenum1 = new String('6V'); 
+N(1, '<font color=#0000FF>U<SUB>3</SUB></font> = ');
+</SCRIPT>
+<LI>Exprimer <font color=#FF0000>I<SUB>2</SUB></font> avec la loi d'Ohm.</LI>
+<SCRIPT>
+var reponseFormelle2 = 'I2=U3/R2';
+F_Canonique(2);
+</SCRIPT>
+<LI>Calculer <font color=#FF0000>I<SUB>2</SUB></font>.</LI>
+<SCRIPT>
+var reponsenum3 = new String('1,5mA'); 
+N(3, '<font color=#FF0000>I<SUB>2</SUB></font> = ');
+</SCRIPT>
+<LI>D&eacute;duire <font color=#FF0000>I<SUB>1</SUB></font>.</LI>
+<SCRIPT>
+var reponsenum4 = new String('4,5mA'); 
+N(4, '<font color=#FF0000>I<SUB>1</SUB></font> = ');
+</SCRIPT>
+<LI>Calculer <font color=#0000FF>U<SUB>1</SUB></font>.</LI>
+<SCRIPT>
+var reponsenum5 = new String('9V'); 
+N(5, '<font color=#0000FF>U<SUB>1</SUB></font> = ');
+</SCRIPT>
+<LI>Calculer <font color=#0000FF>U</font>.</LI>
+<SCRIPT>
+var reponsenum6 = new String('15V'); 
+N(6, '<font color=#0000FF>U</font> = ');
+</SCRIPT>
+</OL>
+</OL>
+</OL>
+
+<HR size="4">
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

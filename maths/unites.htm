@@ -1,0 +1,133 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Unités</TITLE>
+<LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<BODY LINK="#0000ff" VLINK="#800080" BACKGROUND="../data/FOND.gif">
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript">
+</SCRIPT>
+<!--CONFIGURATION du fond graphique de la page-->
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(8); 
+var boolpage = new Array(); 
+for (i = 0; i < nbrechamps; i++) boolpage[i] = 0; 
+<!--configuration des liens-->
+lien("#maths", "application.htm", "droites.htm"); vu_metre(); 
+</SCRIPT>
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<hr class=barre>
+
+<H1>Equations aux unit&eacute;s&nbsp;: </H1>
+<P>Remarque&nbsp;: Les r&eacute;ponses seront libell&eacute;es&nbsp;: rep = ... </P>
+<P>On donne E = k&#937; avec E en V et &#937; en rad.s<SUP>-1</SUP>. Donnez l'unit&eacute; de k.</P>
+<!--************************************************************************-->
+<!--*******************  rep = V*s/rad *************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponseFormelle0 = "rep = V*s/rad"; 
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(0); 
+</SCRIPT>
+<P>&nbsp;</P>
+<P>On donne U = k&#937; + RI avec U en V et &#937; en rad.s<SUP>-1</SUP>. Donnez l'unit&eacute; de RI, celle de k&#937; et de k.</P>
+<P>unit&eacute; de RI :</P>
+<!--************************************************************************-->
+<!--*******************  rep = V *******************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponseFormelle1 = "rep = V"; 
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(1); 
+</SCRIPT>
+<P>unit&eacute; de k&#937; :</P>
+<!--************************************************************************-->
+<!--*******************  rep = V *******************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponseFormelle2 = "rep = V"; 
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(2); 
+</SCRIPT>
+<P>unit&eacute; de k :</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = V*s/rad *************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponseFormelle3 = "rep = V*s/rad";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(3);
+</SCRIPT>
+<P>On donne T<SUB>em</SUB> = k I avec T<SUB>em</SUB> en N.m et I en A. Donnez l'unit&eacute; de k.</P>
+<!--************************************************************************-->
+<!--*******************  rep = N*m/A ***************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponseFormelle4 = "rep = N*m/A"; 
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(4); 
+</SCRIPT>
+<P>On donne V = d / t avec V en m.s<SUP>-1</SUP> et t en s. Donnez l'unit&eacute; de d.</P>
+<!--************************************************************************-->
+<!--*******************  rep = m *******************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponseFormelle5 = "rep = m"; 
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(5); 
+</SCRIPT>
+<P>On donne <sub><sub><sub><sub><sub><sub><IMG SRC="Image103.gif" WIDTH=56 HEIGHT=41></sub></sub></sub></sub></sub></sub>, avec i en A et t en s. Donnez l'unit&eacute; de <sub><sub><sub><sub><sub><sub><IMG SRC="Image104.gif" WIDTH=24 HEIGHT=41></sub></sub></sub></sub></sub></sub></P>
+<!--************************************************************************-->
+<!--*******************  rep = A/s *****************************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 6-->
+var reponseFormelle6 = "rep = A/s"; 
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(6); 
+</SCRIPT>
+<P>On donne <sub><sub><sub><sub><sub><sub><IMG SRC="Image105.gif" WIDTH=52 HEIGHT=41></sub></sub></sub></sub></sub></sub> avec &#937; en rad.s<SUP>-1</SUP> et t en s. Donnez l'unit&eacute; de a.</P>
+<!--************************************************************************-->
+<!--*******************  rep = rad/(s*s) ***********************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 7-->
+var reponseFormelle7 = "rep = rad/(s*s)"; 
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(7); 
+</SCRIPT>
+
+<hr class = barre>
+<BR>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

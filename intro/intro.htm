@@ -1,0 +1,324 @@
+<HTML>
+<HEAD>
+   <TITLE>Introduction</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+   
+   <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="*">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--déclaration d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--remplacer le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(5);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#intro", "", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<!--<table width=100%>
+<tr>
+<TD align="left" width=10%> <FONT FACE="Times" color=blue SIZE=5>0 </FONT></TD>
+<TD align="center" width=30%> <FONT FACE="Times" color=blue SIZE=5>5 </FONT></TD>
+<TD align="center" width=20%> <FONT FACE="Times" color=blue SIZE=5>10 </FONT></TD>
+<TD align="center" width=30%> <FONT FACE="Times" color=blue SIZE=5>15 </FONT></TD>
+<TD align="right" width=10%> <FONT FACE="Times" color=blue SIZE=5>20 </FONT></TD>
+</tr>
+</table>-->
+
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre"><sup>0</sup></div>
+</div>
+<br>
+
+<hr size=4 align=center width="80%">
+
+<!--************************ texte           ****************************-->
+<DIR>
+<H2>Quatre formes diff&eacute;rentes de r&eacute;ponses possibles :</H2>
+</DIR>
+
+<OL>
+<B><FONT FACE="Times" color=#0000FF SIZE=4><LI>Les cases &agrave; cocher</LI></font></B>
+<P>Plusieurs propositions sont faites. S&eacute;lectionner celle(s) qui vous semble(nt) correcte(s) et validez votre r&eacute;ponse.</P>
+<P class=rem>Exemple :</P>
+
+<SCRIPT>
+//reponses QCM0
+var reponseQCM0 = new Array(true, false, false, true, false);
+var alternatives0 = new Array(        "R&eacute;ponse juste 1",
+                                                                "R&eacute;ponse fausse 1",
+                                                                "R&eacute;ponse fausse 2",
+                                                                "R&eacute;ponse juste 2",
+                                                                "R&eacute;ponse fausse 3");
+
+qcmv(0, alternatives0);
+
+</SCRIPT>
+
+<hr size=4 align=center width="80%">
+
+<B><FONT FACE="Times" color=#0000FF SIZE=4><LI>Les boites &agrave; options</LI></font></B>
+<P>Le principe est le m&ecirc;me que pr&eacute;c&eacute;demment mais les r&eacute;ponses sont dans un petit menu d&eacute;roulant. Cliquez sur la fl&egrave;che de droite et s&eacute;lectionnez la bonne r&eacute;ponse.</P>
+<P class=rem>Exemple :</P>
+
+<SCRIPT>
+var reponseoption1 = new Array(3, 1);
+</SCRIPT>
+
+<BR>
+<FORM name="option1">&nbsp;
+<CENTER><TABLE BORDER=0 WIDTH="70%" >
+<TR>
+<TD>1) réponse 1 :</TD>
+<TD>
+<SELECT size="1">
+        <OPTION value="a"></OPTION>
+        <OPTION value="b">R&eacute;ponse fausse 1</OPTION>
+        <OPTION value="c">R&eacute;ponse fausse 2</OPTION>
+        <OPTION value="d">R&eacute;ponse juste</OPTION>
+        <OPTION value="e">R&eacute;ponse fausse 3</OPTION>
+</SELECT>
+</TD>
+<TR>
+<TD>2) réponse 2 :</TD>
+
+<TD>
+<SELECT size="1">
+        <OPTION value="a"></OPTION>
+        <OPTION value="b">R&eacute;ponse juste</OPTION>
+        <OPTION value="c">R&eacute;ponse fausse 1</OPTION>
+        <OPTION value="d">R&eacute;ponse fausse 2</OPTION>
+        <OPTION value="e">R&eacute;ponse fausse 3</OPTION>
+</SELECT>
+</TD>
+</TR>
+</TABLE></CENTER>
+</FORM>
+<DIV align="right"><SCRIPT>champtestoptionbouton(1);</SCRIPT></DIV>
+
+<hr size=4 align=center width="80%">
+
+
+
+
+<B><FONT FACE="Times" color=#0000FF SIZE=4><LI>Les r&eacute;ponses num&eacute;riques</LI></font></B>
+<P>La r&eacute;ponse &agrave; la question est une valeur num&eacute;rique avec son unit&eacute; (si il y en a une). On peut entrer cette valeur de diff&eacute;rentes mani&egrave;res. Supposons que la r&eacute;ponse soit <B>0,003 A</B>, on pourra utiliser une des formulations suivantes :</P>
+<P ALIGN="CENTER">0,003 A </P>
+<P ALIGN="CENTER">3 mA </P>
+<P ALIGN="CENTER">3e-3 A.</P>
+<P>Les suffixes accept&eacute;s sont : </P>
+<P ALIGN="CENTER">n pour nano(10<SUP>-9</SUP>), u pour micro (10<SUP>-6</SUP>), m pour milli (10<SUP>-3</SUP>), k pour kilo (10<SUP>3</SUP>), M pour mega (10<SUP>6</SUP>).</P>
+<P class=rem>Exemple :</P>
+<P>Entrez la r&eacute;ponse 0,0005 V sous l'une des trois formes pr&eacute;c&eacute;dentes</P>
+
+
+<SCRIPT>
+var reponsenum2 = new String('0,0005V'); 
+N(2);
+</SCRIPT>
+
+<hr size=4 align=center width="80%">
+
+
+<FONT FACE="Times" color=#0000FF SIZE=4><LI><B>Les r&eacute;ponses formelles</B></LI></font>
+</OL>
+
+<DIR>
+<P>La r&eacute;ponse &agrave; la question est une relation math&eacute;matique. Les op&eacute;rateurs valides sont ceux habituellement utilis&eacute;s sur les machines &agrave; calculer et sont r&eacute;sum&eacute;s ici :</P>
+<P class=envue>&#9;Op&eacute;rateurs :&#9;</P>
+
+<P ALIGN="CENTER"><CENTER><TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=308>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>+</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>Addition</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>-</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>Soustraction</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>*</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>Multiplication</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>/</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>Division</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>^</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>Puissance</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>=</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>Egalit&eacute;</TD>
+</TR>
+</TABLE>
+</CENTER><p></P>
+
+<P>&nbsp;</P>
+
+
+<P class=envue>Fonctions :</P>
+
+
+<P ALIGN="CENTER"><CENTER><TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=310>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>sin</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Sinus</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>cos</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Cosinus</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>tan</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Tangente</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>arcsin</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Inverse sinus</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>arccos</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Inverse cosinus</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>arctan</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Inverse tangente</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>sh</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Sinus hyperbolique</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>ch</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Cosinus hyperbolique</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>th</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Tangente hyperbolique</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>argsh</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Inverse sh</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>argch</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Inverse ch</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>argth</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Inverse th</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>abs </TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Valeur absolue</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>!</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Factorielle</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>exp</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Exponentielle</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>ln</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Logarithme n&eacute;p&eacute;rien</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>log</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Logarithme d&eacute;cimal</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>sqrt</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=7>
+<P>Racine carr&eacute;</TD>
+</TR>
+</TABLE>
+</CENTER>
+
+
+
+<P><font class=envue>Constantes :</font></P>
+
+
+<P ALIGN="CENTER"><CENTER><TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=308>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>pi</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>3,14159……….</TD>
+</TR>
+
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>j</TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=33>
+<P>j = sqrt(-1) </TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P><font class=envue>Parenth&egrave;ses :</font> Elles permettent d'imposer un ordre de priorit&eacute; particulier dans les op&eacute;rations. Elles sont obligatoires avec l'usage d'une fonction; par exemple : sin(w*t)</P>
+
+<P class=rem>Exemple :</P>
+<P>Entrez la r&eacute;ponse U = R* I * (sin(w*t) + 5,2e-2)</P>
+<SCRIPT>
+var reponseFormelle3 = 'U=R*I*(sin(w*t)+5,2e-2)'; 
+F_Canonique(3);
+</SCRIPT>
+
+<P>Exprimer I en fonction des autres termes (r&eacute;ponse sous forme I = …)</P>
+<SCRIPT>
+var reponseFormelle4 = 'I=U/(R*(sin(w*t)+5,2e-2))'; 
+F_Canonique(4);
+</SCRIPT>
+</DIR>
+
+
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

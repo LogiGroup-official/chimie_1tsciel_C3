@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+   <TITLE>QCM Puissance et énergie</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+   
+   <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="*">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--déclaration d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--remplacer le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(12);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#energie", "coursEnergie.htm", "exo_energie_puissance1.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre"><sup>0</sup></div>
+</div>
+<br>
+
+<hr size=4 align=center width="80%">
+
+<!--*********************** texte *****************************-->
+<H3>Cocher les assertions correctes&nbsp;:</h3>
+
+<!--************************************************************************-->
+<!--*******************  rep = false, true, false, true, false, true *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponseQCM0 = new Array(false, true, false, true, false, true);
+<!--alternatives de la réponse numéro 0-->
+var alternatives0 = new Array(
+"La puissance et l'&eacute;nergie sont deux grandeurs identiques.", 
+"La puissance est une grandeur instantan&eacute;e. ", 
+"L'&eacute;nergie est une grandeur instantan&eacute;e.", 
+"L'unit&eacute; de l'&eacute;nergie est le Joule.", 
+"L'unit&eacute; de l'&eacute;nergie est le watt.", 
+"L'&eacute;nergie v&eacute;rifie la relation&nbsp;: E = P x t.");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(0);
+</SCRIPT>
+
+<H3>Cocher les assertions correctes&nbsp;:</H3>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = true, false, false, true, true *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponseQCM1 = new Array(true, false, false, true, true);
+<!--alternatives de la réponse numéro 1-->
+var alternatives1 = new Array(
+"L'&eacute;nergie consomm&eacute;e par un appareil &eacute;lectrique d&eacute;pend de la dur&eacute;e d'utilisation.", 
+"La puissance d'un appareil &eacute;lectrique d&eacute;pend de sa dur&eacute;e d'utilisation.", 
+"En courant continue la puissance est P = U / I.", 
+"En courant continu la puissance est P = U x I.", 
+"En courant continu l'&eacute;nergie est E = U x I x t");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(1);
+</SCRIPT>
+
+<H3>Soit un dispositif aliment&eacute; en continu tel que U = 15V et I = 3A pendant t = 10 min</H3>
+<P>La puissance P &eacute;lectrique absorb&eacute;e est alors&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  45 W *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponsenum2 = " 45 W";
+<!--APPEL de la fonction d'affichage et de test-->
+N(2,'P = ');
+</SCRIPT>
+<P>L'&eacute;nergie E &eacute;lectrique absorb&eacute;e en J est alors&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  2700 J *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponsenum3 = " 27000 J";
+<!--APPEL de la fonction d'affichage et de test-->
+N(3,'E = ');
+</SCRIPT>
+<P>L'&eacute;nergie E &eacute;lectrique absorb&eacute;e en W.h est alors&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  7,5 W.h *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponsenum4 = " 7,5 W.h";
+<!--APPEL de la fonction d'affichage et de test-->
+N(4,'E = ');
+</SCRIPT>
+<H3>Cocher les assertions correctes&nbsp;:</H3>
+<P>Dans une r&eacute;sistance la puissance &eacute;lectrique absorb&eacute;e&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = false, true, false, false, true *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponseQCM5 = new Array(false, true, false, false, true);
+<!--alternatives de la réponse numéro 5-->
+var alternatives5 = new Array(
+"Est d&eacute;truite.", 
+"Est convertie en chaleur.", 
+"Ne d&eacute;pend pas de la valeur de la r&eacute;sistance R.", 
+"Est proportionnelle &agrave; l'intensit&eacute; du courant I.", 
+"Est proportionnelle au carr&eacute; de l'intensit&eacute; du courant I.");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(5);
+</SCRIPT>
+
+<H3>Une r&eacute;sistance R est travers&eacute;e par un courant d'intensit&eacute; I et a une tension U &agrave; ses bornes.</H3>
+<H3>Donner l'expression de la puissance P consomm&eacute;e par la r&eacute;sistance.</H3>
+<P>En fonction de U et I&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = P = U*I *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 6-->
+var reponseFormelle6 = "P = U*I";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(6);
+</SCRIPT>
+<P>En fonction de R et I&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = P = R*I^2 *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 7-->
+var reponseFormelle7 = "P = R*I^2";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(7);
+</SCRIPT>
+<P>En fonction de R et U&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = P = U^2/R *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 8-->
+var reponseFormelle8 = "P = U^2/R";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(8);
+</SCRIPT>
+
+<H3>Soit une r&eacute;sistance R = 2<FONT FACE="Times New Roman">&#937;</FONT> travers&eacute;e par un courant I = 5 A pendant t = 1 min.</H3>
+<P>La puissance P consomm&eacute;e par la r&eacute;sistance est :</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = false, true, true, false, false *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 9-->
+var reponseQCM9 = new Array(false, true, true, false, false);
+<!--alternatives de la réponse numéro 9-->
+var alternatives9 = new Array(
+"P = R x I = 2 x 5 = 10 V", 
+"P = R x I² = 2 x 5² = 50 W", 
+"P = U x I = 2 x 5 x 5 = 50 W", 
+"P = U / R = 2 x 5 / 2 = 5 W", 
+"P = U x I x t = 50 W");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(9);
+</SCRIPT>
+
+<H3>Le rendement d'un syst&egrave;me &eacute;lectrique qui absorbe une puissance de 500W est de 90%. </H3>
+<P>Cochez les assertions justes&nbsp;:</P>
+
+<!--************************************************************************-->
+<!--*******************  rep = false, true, false, false, true *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 10-->
+var reponseQCM10 = new Array(false, true, false, false, true);
+<!--alternatives de la réponse numéro 10-->
+var alternatives10 = new Array(
+"P<SUB>utile</SUB> = 90W", 
+"P<SUB>utile</SUB> = 450W", 
+"P<SUB>utile</SUB> = 410W", 
+"P<SUB>perdue</SUB> = 410W", 
+"P<SUB>perdue</SUB> = 50W");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(10);
+</SCRIPT>
+
+<H3>Une batterie de 12V et de 6 Ah est capable de&nbsp;:</H3>
+
+<!--************************************************************************-->
+<!--*******************  rep = true, false, false, false, true *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 11-->
+var reponseQCM11 = new Array(true, false, false, false, true);
+<!--alternatives de la réponse numéro 11-->
+var alternatives11 = new Array(
+"Fournir un courant de 1A pendant 6h", 
+"Fournir un courant de 1A pendant 12h", 
+"D&eacute;livrer une &eacute;nergie E = 6 J", 
+"D&eacute;livrer une &eacute;nergie E = 72 J", 
+"D&eacute;livrer une &eacute;nergie E = 72 W.h");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(11);
+</SCRIPT>
+
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<HEAD>
+
+<TITLE>Transformation de formules</TITLE>
+ <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/FOND.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(14);
+var boolpage = new Array();
+for (i = 0; i < nbrechamps; i++) boolpage[i] = 0;
+<!--configuration des liens-->
+lien("#maths", "simplification.htm", "application.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<hr class=barre>
+
+<h1>Transformation de formule</h1>
+
+
+<P>Pour faire &quot;&nbsp;dispara&icirc;tre&nbsp;&quot; un terme d'un c&ocirc;t&eacute; de l'&eacute;quation, il suffit d'utiliser l'op&eacute;ration contraire des deux c&ocirc;t&eacute;s du signe &eacute;gal.</P>
+
+<P>Par exemple, pour faire &quot;disparaitre&quot; le terme c :</P>
+<blockquote>
+<blockquote>
+    <p><IMG SRC="Image77.gif" WIDTH=328 HEIGHT=26></p>
+    	<p><IMG SRC="Image78.gif" WIDTH=232 HEIGHT=41></p>
+  </blockquote>
+</blockquote>
+<h2>Exercice 1</h2>
+
+<P>Exprimez a en fonction des autres termes&nbsp;:</P>
+
+<blockquote>
+  <blockquote>
+  	<p>a - b = c </p>
+  </blockquote>
+</blockquote>
+  <!--************************************************************************-->
+  <!--*******************  rep = a=c+b *******************************-->
+  <!--************************************************************************-->
+        <SCRIPT>
+<!--VALEUR de la réponse numéro 12-->
+var reponseFormelle12 = "a=c+b";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(12);
+      </SCRIPT> 
+<blockquote>
+  <blockquote>      
+	<p><IMG SRC="Image79.gif" WIDTH=56 HEIGHT=18></p>
+  </blockquote>
+</blockquote>
+        <!--************************************************************************-->
+        <!--*******************  rep = a=c/b *******************************-->
+        <!--************************************************************************-->
+        <SCRIPT>
+<!--VALEUR de la réponse numéro 13-->
+var reponseFormelle13 = "a=c/b";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(13);
+          </SCRIPT> 
+<blockquote>
+  <blockquote>        
+	<p><IMG SRC="Image80.gif" WIDTH=38 HEIGHT=41></p>
+  </blockquote>
+</blockquote>
+        <!--************************************************************************-->
+        <!--*******************  rep = a=b*c *******************************-->
+        <!--************************************************************************-->
+        <p>
+        <SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponseFormelle0 = "a=b*c";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(0);
+          </SCRIPT> 
+          
+<blockquote>
+  <blockquote>
+  	<p><IMG SRC="Image81.gif" WIDTH=38 HEIGHT=41></p>
+  </blockquote>
+</blockquote>
+          <!--************************************************************************-->
+          <!--*******************  rep = a=b/c *******************************-->
+          <!--************************************************************************-->
+          <SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponseFormelle1 = "a=b/c";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(1);
+          </SCRIPT> 
+            
+<blockquote>
+  <blockquote>
+  	<p><IMG SRC="Image82.gif" WIDTH=78 HEIGHT=18></p>
+  </blockquote>
+</blockquote>
+          <!--************************************************************************-->
+          <!--*******************  rep = a=(d-c)/b *******************************-->
+          <!--************************************************************************-->
+          <SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponseFormelle2 = "a=(d-c)/b";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(2);
+          </SCRIPT> 
+            
+<blockquote>
+  <blockquote>
+  	<p><IMG SRC="Image83.gif" WIDTH=78 HEIGHT=18></p>
+  </blockquote>
+</blockquote>
+          <!--************************************************************************-->
+          <!--*******************  rep = a=d-b*c *******************************-->
+          <!--************************************************************************-->
+          <SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponseFormelle3 = "a=d-b*c";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(3);
+          </SCRIPT> 
+            
+<blockquote>
+  <blockquote>
+  	<p><IMG SRC="Image84.gif" WIDTH=90 HEIGHT=26></p>
+  </blockquote>
+</blockquote>
+          <!--************************************************************************-->
+          <!--*******************  rep = a=d/c-b *******************************-->
+          <!--************************************************************************-->
+          <SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponseFormelle4 = "a=d/c-b";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(4);
+          </SCRIPT> 
+            
+<blockquote>
+  <blockquote>
+  	<p><IMG SRC="Image85.gif" WIDTH=61 HEIGHT=41></p>
+  </blockquote>
+</blockquote>
+          <!--************************************************************************-->
+          <!--*******************  rep = a=(d-b)*c *******************************-->
+          <!--************************************************************************-->
+          <SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponseFormelle5 = "a=(d-b)*c";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(5);
+          </SCRIPT> 
+            
+<blockquote>
+  <blockquote>
+  	<p><IMG SRC="Image86.gif" WIDTH=61 HEIGHT=41></p>
+  </blockquote>
+</blockquote>
+          <!--************************************************************************-->
+          <!--*******************  rep = a=d*c-b *******************************-->
+          <!--************************************************************************-->
+          <SCRIPT>
+<!--VALEUR de la réponse numéro 6-->
+var reponseFormelle6 = "a=d*c-b";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(6);
+          </SCRIPT> 
+          
+ <h2>Exercice 2</h2>
+        
+        <P>Soit l'expression : Q = mcdT.        
+        <P> Exprimez dT en fonction de Q, m et c :
+          <!--************************************************************************-->
+          <!--*******************  rep = dT=Q/(m*c) *******************************-->
+          <!--************************************************************************-->
+          <SCRIPT>
+<!--VALEUR de la réponse numéro 7-->
+var reponseFormelle7 = "dT=Q/(m*c)";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(7);
+          </SCRIPT>
+    
+<P>Soit l'expression : <sub><sub><IMG SRC="Image89.gif" WIDTH=52 HEIGHT=20></sub></sub>.       
+<P>Exprimez I en fonction de P et R&nbsp;: 
+        <!--************************************************************************-->
+        <!--*******************  rep = I=sqrt(P/R) *******************************-->
+        <!--************************************************************************-->
+        <SCRIPT>
+<!--VALEUR de la réponse numéro 8-->
+var reponseFormelle8 = "I=sqrt(P/R)";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(8);
+        </SCRIPT>
+  
+<P>Soit l'expression : Q = 6sV .       
+<P>Exprimez v en fonction de Q et S&nbsp;: 
+        <!--************************************************************************-->
+        <!--*******************  rep = v=Q/(6*S) *******************************-->
+        <!--************************************************************************-->
+        <SCRIPT>
+<!--VALEUR de la réponse numéro 9-->
+var reponseFormelle9 = "v=Q/(6*S)";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(9);
+        </SCRIPT>
+  
+<P>Soit l'expression : <sub><sub><sub><sub><sub><sub><IMG SRC="Image91.gif" WIDTH=94 HEIGHT=41></sub></sub></sub></sub></sub></sub>.       
+<P>Exprimez R en fonction de E&nbsp;: 
+        <!--************************************************************************-->
+        <!--*******************  rep = R=2*E/12-2 *******************************-->
+        <!--************************************************************************-->
+        <SCRIPT>
+<!--VALEUR de la réponse numéro 10-->
+var reponseFormelle10 = "R=2*E/12-2";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(10);
+        </SCRIPT>
+  
+<P>Soit l'expression : <sub><sub><sub><IMG SRC="Image92.gif" WIDTH=66 HEIGHT=26></sub></sub></sub>.       
+<P>Exprimez h en fonction de v et g&nbsp;: 
+        <!--************************************************************************-->
+        <!--*******************  rep = h=v*v/(2*g) *******************************-->
+        <!--************************************************************************-->
+        <SCRIPT>
+<!--VALEUR de la réponse numéro 11-->
+var reponseFormelle11 = "h=v*v/(2*g)";
+<!--APPEL de la fonction d'affichage et de test-->
+F_C(11);
+        </SCRIPT>
+        
+<hr class = barre>
+<BR>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+   <TITLE>Loi d'Ohm</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+</HEAD>
+
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--DéCLARATION d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--REMPLACER le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(5);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#ohm", "cours_resistance.htm", "ohm1.htm");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre">0</div>
+</div>
+<br>
+
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* true, true, false, true, true *******************-->
+<!--*********************************************************************-->
+<H3>
+<P>Cocher les assertions qui sont justes :</P>
+</H3>
+<SCRIPT>
+//reponses QCM0
+var reponseQCM0 = new Array(true, false, true, true);
+var alternatives0 = new Array("La r&eacute;sistance &eacute;lectrique s'exprime en ohms (&#937;).",
+                              "La r&eacute;sistance &eacute;lectrique s'exprime en siemens (S).",
+                              "Des volts/amp&egrave;res repr&eacute;sentent une r&eacute;sistance.",
+                              "Des volts/ohms repr&eacute;sentent une intensit&eacute; de courant."
+                              );
+
+qcmv(0, alternatives0);
+
+</SCRIPT>
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* false, false, true, false, true, true ***********-->
+<!--*********************************************************************-->
+
+<H3>
+<P>Cocher les assertions qui sont justes :</P>
+</H3>
+<SCRIPT>
+//reponses QCM1
+var reponseQCM1 = new Array(false, false, true, false, true, true);
+var alternatives1 = new Array("La caract&eacute;ristique d'une r&eacute;sistance est une droite ne passant pas par l'origine.",
+                              "Le coefficient directeur de la caract&eacute;ristique d'une r&eacute;sistance est n&eacute;gatif.",
+                              "Le coefficient directeur de la caract&eacute;ristique d'une r&eacute;sistance est sa valeur R.",
+                              "Plus la tension aux bornes d'une r&eacute;sistance augmente, plus l'intensit&eacute; du courant qui la traverse diminue.",
+                              "Plus l'intensit&eacute; du courant qui traverse la r&eacute;sistance est faible, plus la tension &agrave; ses bornes est faible.",
+                              "La tension aux bornes d'une r&eacute;sistance est proportionnelle &agrave; l'intensit&eacute; du courant qui la traverse.");
+
+qcmv(1, alternatives1);
+
+</SCRIPT>
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* false, false, true, false, true, true ***********-->
+<!--*********************************************************************-->
+<H3>
+<P>Cocher les assertions qui sont justes :</P>
+</H3>
+
+<SCRIPT>
+//reponses QCM2
+var reponseQCM2 = new Array(true, false, false, true, true);
+var alternatives2 = new Array("En convention r&eacute;cepteur les fl&egrave;ches de la tension et du courant sont de sens oppos&eacute;s.",
+                              "Certains dip&ocirc;les passifs ont une r&eacute;sistance n&eacute;gative.",
+                              "Une r&eacute;sistance mont&eacute; &agrave; l'envers pr&eacute;sente une r&eacute;sistance n&eacute;gative.",
+                              "Les fils &eacute;lectriques de liaison ont une r&eacute;sistance proche de z&eacute;ro.",
+                              "Un interrupteur ouvert pr&eacute;sente une r&eacute;sistance infinie entre ses bornes.");
+
+qcmv(2, alternatives2);
+
+</SCRIPT>
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* true, true, false, true, false, false ***********-->
+<!--*********************************************************************-->
+
+<H3>
+<P>Cocher les assertions qui sont justes :</P>
+</H3>
+
+<SCRIPT>
+//reponses QCM3
+var reponseQCM3 = new Array(true, true, false, true, false, false);
+var alternatives3 = new Array("La diff&eacute;rence de potentiel aux bornes d'un fil est n&eacute;gligeable.",
+                              "L'intensit&eacute; du courant &eacute;lectrique qui circule &agrave; travers un interrupteur ouvert est nulle.",
+                              "A tension constante, plus la r&eacute;sistance d'un composant est &eacute;lev&eacute;e, plus l'intensit&eacute; du courant qui le traverse augmente.",
+                              "A courant constant, plus la r&eacute;sistance d'un composant est &eacute;lev&eacute;e, plus la tension &agrave; ses bornes augmente.",
+                              "Plus une r&eacute;sistance est volumineuse, plus sa valeur est faible.",
+                              "Plus une r&eacute;sistance est volumineuse, plus sa valeur est &eacute;lev&eacute;e.");
+
+qcmv(3, alternatives3);
+
+</SCRIPT>
+<HR size="4">
+<!--*********************************************************************-->
+<!--******************* false, true, false, true, false, true ***********-->
+<!--*********************************************************************-->
+
+<H3>
+<P>Par rapport au montage suivant, cocher les lois d'Ohm qui sont justes :</P>
+</H3>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=4 WIDTH=287>
+<TR><TD VALIGN="MIDDLE" HEIGHT=190>
+<P ALIGN="CENTER"><IMG SRC="Image62.gif" WIDTH=272 HEIGHT=145></TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+
+<SCRIPT>
+//reponses QCM4
+var reponseQCM4 = new Array(false, true, false, true, false, true);
+var alternatives4 = new Array("<font color=#0000FF>U</font> = R * <font color=#FF0000>I</font>",
+                                                        "<font color=#0000FF>U<SUB>1</SUB></font> = R<SUB>1</SUB> * <font color=#FF0000>I<SUB>1</SUB></font>",
+                                                        "<font color=#0000FF>U</font> = R<SUB>2</SUB> * <font color=#FF0000>I<SUB>2</SUB></font>",
+                                                        "<font color=#0000FF>U<SUB>3</SUB></font> = R<SUB>2</SUB> * <font color=#FF0000>I<SUB>2</SUB></font>",
+                                                        "<font color=#0000FF>U<SUB>3</SUB></font> = R<SUB>3</SUB> * <font color=#FF0000>I<SUB>3</SUB></font>",
+                                                        "<font color=#0000FF>U<SUB>3</SUB></font> = -R<SUB>3</SUB> * <font color=#FF0000>I<SUB>3</font>");
+
+qcmv(4, alternatives4);
+
+</SCRIPT>
+<HR size="4">
+<BR>
+<BR>
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>

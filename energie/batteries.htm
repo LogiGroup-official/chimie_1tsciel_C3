@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+   <TITLE>Les batteries</TITLE>
+   <LINK rel=stylesheet type="text/css" href="../data/styles.css">
+   
+   <META HTTP-EQUIV="Access-Control-Allow-Origin" CONTENT="*">
+</HEAD>
+<!--CHARGEMENT des routines-->
+<SCRIPT SRC=../data/routines.js LANGUAGE="JavaScript"></SCRIPT>
+<!--CONFIGURATION du fond graphique de la page-->
+<BODY BACKGROUND=../data/fond.gif>
+
+<!--*********************************************************************-->
+<!--******************* definitions preliminaires ***********************-->
+<!--*********************************************************************-->
+<SCRIPT>
+<!--déclaration d'un tableau de booléen permettant de connaitre les résultats de chaque test (initialisation à 0)-->
+<!--remplacer le nombre inscrit dans la première ligne par le nombre de tests-->
+var nbrechamps = new Number(13);
+var boolpage=new Array();
+for (i=0; i<nbrechamps; i++) boolpage[i] = 0;
+
+<!--configuration des liens-->
+lien("#energie", "exo_energie_puissance1.htm", "");
+vu_metre();
+</SCRIPT>
+
+<!--*********************************************************************-->
+<!--*********************** animation bilan *****************************-->
+<!--*********************************************************************-->
+
+<H2> Barre de progression </H2>
+
+<div id="Enveloppe">
+	<div align="center" min="0" max="100" id="maBarre"><sup>0</sup></div>
+</div>
+<br>
+
+<hr size=4 align=center width="80%">
+
+<!--************************ texte           ****************************-->
+
+<H3>Exercice 1</H3>
+<P>Une batterie de capacit&eacute; 5000mAh, de tension 3V est utilis&eacute;e pour alimenter un module &eacute;lectronique qui n&eacute;cessite une puissance P = 1,5 W.</P>
+<P>Calculer l'&eacute;nergie E disponible dans la batterie en Wh.</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  15 Wh *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 0-->
+var reponsenum0 = " 15 Wh";
+<!--APPEL de la fonction d'affichage et de test-->
+N(0,'E = ');
+</SCRIPT>
+
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>D&eacute;terminer pendant combien de temps t le module sera aliment&eacute; par cette batterie.</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  10h *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponsenum1 = " 10h";
+<!--APPEL de la fonction d'affichage et de test-->
+N(1,'t = ');
+</SCRIPT>
+
+<P>&nbsp;</P>
+<H3>Exercice 2</H3>
+<P>Pour chacune des associations de batteries suivantes, donner la tension totale U<SUB>bat</SUB> et la capacit&eacute; C de l'ensemble.</P>
+<P ALIGN="CENTER"><A NAME="_MON_1746200887"><A NAME="_MON_1746196291"></A></A><IMG SRC="Image125.gif" WIDTH=211 HEIGHT=107></P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  24V *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponsenum2 = " 24V";
+<!--APPEL de la fonction d'affichage et de test-->
+N(2,'U<SUB>bat</SUB> = ');
+</SCRIPT>
+
+<!--************************************************************************-->
+<!--*******************  rep =  55Ah *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 3-->
+var reponsenum3 = " 55Ah";
+<!--APPEL de la fonction d'affichage et de test-->
+N(3,'C = ');
+</SCRIPT>
+
+<P ALIGN="CENTER"><IMG SRC="Image126.gif" WIDTH=115 HEIGHT=203></P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  12V *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 4-->
+var reponsenum4 = " 12V";
+<!--APPEL de la fonction d'affichage et de test-->
+N(4,'U<SUB>bat</SUB> = ');
+</SCRIPT>
+
+<!--************************************************************************-->
+<!--*******************  rep =  110Ah *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 5-->
+var reponsenum5 = " 110Ah";
+<!--APPEL de la fonction d'affichage et de test-->
+N(5,'C = ');
+</SCRIPT>
+
+<P ALIGN="CENTER"><IMG SRC="Image127.gif" WIDTH=436 HEIGHT=107></P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  48V *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 6-->
+var reponsenum6 = " 48V";
+<!--APPEL de la fonction d'affichage et de test-->
+N(6,'U<SUB>bat</SUB> = ');
+</SCRIPT>
+
+<!--************************************************************************-->
+<!--*******************  rep =  55Ah *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 7-->
+var reponsenum7 = " 55Ah";
+<!--APPEL de la fonction d'affichage et de test-->
+N(7,'C = ');
+</SCRIPT>
+
+<P ALIGN="CENTER"><IMG SRC="Image128.gif" WIDTH=243 HEIGHT=203></P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  24V *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 8-->
+var reponsenum8 = " 24V";
+<!--APPEL de la fonction d'affichage et de test-->
+N(8,'U<SUB>bat</SUB> = ');
+</SCRIPT>
+
+<!--************************************************************************-->
+<!--*******************  rep =  110Ah *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 9-->
+var reponsenum9 = " 110Ah";
+<!--APPEL de la fonction d'affichage et de test-->
+N(9,'C = ');
+</SCRIPT>
+
+<H3>Exercice 3</H3><DIR>
+
+<P>On poss&egrave;de des &eacute;l&eacute;ments de batterie de type NIMH. On dispose de 10 &eacute;l&eacute;ments de tension nominale 1,2 V et de capacit&eacute; 1000 mAh chacun.</P></DIR>
+
+<P>D&eacute;terminer le type d'association des &eacute;l&eacute;ments pour constituer une batterie de 6V.</P>
+
+
+<!--************************************************************************-->
+<!--*******************  rep = false, false, true, false, true *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 10-->
+var reponseQCM10 = new Array(false, false, true, false, true);
+<!--alternatives de la réponse numéro 10-->
+var alternatives10 = new Array(
+"Tous les &eacute;l&eacute;ments en s&eacute;rie", 
+"Tous les &eacute;l&eacute;ments en parall&egrave;le", 
+"Deux blocs, chacun de cinq &eacute;l&eacute;ments. Les deux blocs associ&eacute;s en parall&egrave;les.", 
+"Trois blocs, chacun de quatre &eacute;l&eacute;ments. Les trois blocs associ&eacute;s en parall&egrave;les.", 
+"Cinq blocs, chacun de deux &eacute;l&eacute;ments en parall&egrave;les. Les cinq blocs associ&eacute;s en s&eacute;rie.");
+<!--APPEL de la fonction d'affichage et de test-->
+Q_V(10);
+</SCRIPT>
+
+<P>D&eacute;terminer la capacit&eacute; de la batterie obtenue alors.</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  2 Ah *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 1-->
+var reponsenum11 = " 2 Ah";
+<!--APPEL de la fonction d'affichage et de test-->
+N(11,'C = ');
+</SCRIPT>
+
+<P>En d&eacute;duire l'autonomie t (en h) d'un syst&egrave;me qui demande <B>0,4 W</B> lorsqu'il est aliment&eacute; sous 6V, si on suppose qu'on peut d&eacute;charger enti&egrave;rement la batterie.</P>
+
+<!--************************************************************************-->
+<!--*******************  rep =  30h *******************************-->
+<!--************************************************************************-->
+<SCRIPT>
+<!--VALEUR de la réponse numéro 2-->
+var reponsenum12 = " 30h";
+<!--APPEL de la fonction d'affichage et de test-->
+N(12,'t = ');
+</SCRIPT>
+
+
+<hr class=barre>
+
+<!--************************ liens de retour ****************************-->
+<script>
+retour();
+</script>
+
+</BODY>
+</HTML>
